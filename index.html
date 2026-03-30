@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Biopunk VC: $25M Pre-Seed Biotech Residency Fund. Discovering biotech founders hidden in labs.">
+    <meta name="keywords" content="biotech, VC, pre-seed, fund, residency, founders, cell therapy, oncology">
+    <meta name="author" content="Biopunk VC">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Biopunk VC - Pre-Seed Biotech Residency Fund">
+    <meta property="og:description" content="$25M Fund I discovering biotech founders at the earliest stage.">
+    <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect fill='%230A0A0A' width='1200' height='630'/%3E%3Ctext x='50%' y='50%' font-size='72' font-weight='bold' fill='%2300FF88' text-anchor='middle' dominant-baseline='middle'%3EBIOPUNK VC%3C/text%3E%3C/svg%3E">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://biopunkvc.com">
+
+    <title>Biopunk VC - Pre-Seed Biotech Residency Fund</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon SVG Data URI -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%230A0A0A' width='100' height='100'/%3E%3Cpath stroke='%2300FF88' stroke-width='2' fill='none' d='M30 30 Q50 20 70 30 M30 30 Q50 40 70 30 M30 50 Q50 40 70 50 M30 50 Q50 60 70 50 M30 70 Q50 60 70 70 M30 70 Q50 80 70 70 M35 35 L65 65 M35 55 L65 45 M35 75 L65 55'/%3E%3C/svg%3E">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        a {
+            color: #00FF88;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #FF3366;
+            text-shadow: 0 0 10px #FF3366;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 32px;
+            background-color: #00FF88;
+            color: #0A0A0A;
+            font-weight: 600;
+            border: 2px solid #00FF88;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Space Grotesk', sans-serif;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #0A0A0A;
+            color: #00FF88;
+            box-shadow: 0 0 20px #00FF88;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            background-color: #FF3366;
+            border-color: #FF3366;
+            color: #0A0A0A;
+        }
+
+        .button-secondary:hover {
+            background-color: #0A0A0A;
+            color: #FF3366;
+            box-shadow: 0 0 20px #FF3366;
+        }
+
+        section {
+            padding: 100px 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0A0A0A;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 51, 102, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(80px, 12vw, 140px);
+            color: #00FF88;
+            text-shadow: 0 0 30px #00FF88;
+            margin-bottom: 20px;
+            letter-spacing: -3px;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 24px;
+            color: #B0B0B0;
+            margin-bottom: 10px;
+        }
+
+        .hero .tagline {
+            font-size: 20px;
+            color: #FF3366;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        /* Thesis Section */
+        .thesis {
+            background-color: #111111;
+            padding: 80px 40px;
+        }
+
+        .thesis h2 {
+            font-size: 42px;
+            color: #00FF88;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+        .thesis p {
+            font-size: 18px;
+            color: #B0B0B0;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background-color: #0A0A0A;
+            padding: 80px 40px;
+        }
+
+        .how-it-works h2 {
+            font-size: 42px;
+            color: #FF3366;
+            margin-bottom: 60px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 2px solid #00FF88;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .step:hover {
+            background: rgba(0, 255, 136, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .step .number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #FF3366;
+            margin-bottom: 15px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .step h3 {
+            font-size: 22px;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .step p {
+            color: #B0B0B0;
+            font-size: 16px;
+        }
+
+        /* Numbers Section */
+        .numbers {
+            background-color: #111111;
+            padding: 80px 40px;
+        }
+
+        .numbers h2 {
+            font-size: 42px;
+            color: #00FF88;
+            margin-bottom: 60px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .stat:hover {
+            background: rgba(0, 255, 136, 0.1);
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+            border-color: #00FF88;
+        }
+
+        .stat .value {
+            font-size: clamp(36px, 8vw, 56px);
+            color: #00FF88;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+            margin-bottom: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .stat .label {
+            font-size: 16px;
+            color: #B0B0B0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Global Houses */
+        .houses {
+            background-color: #0A0A0A;
+            padding: 80px 40px;
+        }
+
+        .houses h2 {
+            font-size: 42px;
+            color: #FF3366;
+            margin-bottom: 60px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+        }
+
+        .houses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .house-card {
+            background: rgba(255, 51, 102, 0.05);
+            border: 2px solid #FF3366;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .house-card:hover {
+            background: rgba(255, 51, 102, 0.1);
+            box-shadow: 0 0 20px rgba(255, 51, 102, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .house-flag {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .house-city {
+            font-size: 20px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .house-vertical {
+            font-size: 14px;
+            color: #B0B0B0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Traction */
+        .traction {
+            background-color: #111111;
+            padding: 80px 40px;
+        }
+
+        .traction h2 {
+            font-size: 42px;
+            color: #00FF88;
+            margin-bottom: 40px;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+        .traction-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .traction-item:last-child {
+            border-bottom: none;
+        }
+
+        .traction-item h3 {
+            font-size: 20px;
+            color: #FF3366;
+            margin-bottom: 10px;
+        }
+
+        .traction-item p {
+            font-size: 16px;
+            color: #B0B0B0;
+        }
+
+        /* Team */
+        .team {
+            background-color: #0A0A0A;
+            padding: 80px 40px;
+        }
+
+        .team h2 {
+            font-size: 42px;
+            color: #FF3366;
+            margin-bottom: 60px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .member-photo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(255, 51, 102, 0.1));
+            border: 2px solid #00FF88;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover .member-photo {
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+            transform: scale(1.05);
+        }
+
+        .member-name {
+            font-size: 22px;
+            color: #00FF88;
+            margin-bottom: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .member-role {
+            font-size: 16px;
+            color: #B0B0B0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .member-bio {
+            font-size: 14px;
+            color: #B0B0B0;
+            line-height: 1.6;
+        }
+
+        /* CTA / Footer */
+        .cta {
+            background-color: #111111;
+            padding: 100px 40px;
+            text-align: center;
+            border-top: 2px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            color: #00FF88;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+        .cta p {
+            font-size: 18px;
+            color: #B0B0B0;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            background-color: #0A0A0A;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            text-align: center;
+            color: #B0B0B0;
+            font-size: 14px;
+        }
+
+        .social-links {
+            margin: 20px 0 40px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+        }
+
+        .fade-in.visible {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: clamp(50px, 10vw, 100px);
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .hero .tagline {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 32px !important;
+            }
+
+            .steps,
+            .stats-grid,
+            .houses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step,
+            .stat,
+            .house-card {
+                padding: 20px;
+            }
+        }
+
+        /* Scroll Animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>BIOPUNK VC</h1>
+            <p class="subtitle">Pre-Seed Biotech Residency Fund</p>
+            <p class="tagline">$25M Fund I</p>
+            <a href="mailto:er.creates@gmail.com" class="button">Request Deck</a>
+        </div>
+    </section>
+
+    <!-- Thesis Section -->
+    <section class="thesis">
+        <div class="container">
+            <h2>Biotech founders are hidden in labs. We find them first.</h2>
+            <p>We discover exceptional scientists before they've incorporated their companies. Pre-Seed is the only stage where a founder's track record matters more than their ability to fundraise. With the patent cliff bringing $170B of M&A opportunities by 2030, we're positioned at the earliest stage of the next generation of biotech unicorns.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step scroll-reveal">
+                    <div class="number">01</div>
+                    <h3>Scout</h3>
+                    <p>Identify exceptional founders hidden in academic labs and research institutions worldwide.</p>
+                </div>
+                <div class="step scroll-reveal">
+                    <div class="number">02</div>
+                    <h3>House</h3>
+                    <p>Bring founders into our global residency houses for 3-6 months of intensive support and mentorship.</p>
+                </div>
+                <div class="step scroll-reveal">
+                    <div class="number">03</div>
+                    <h3>Invest</h3>
+                    <p>Make initial $10K checks, with up to $100K follow-on for exceptional founders and teams.</p>
+                </div>
+                <div class="step scroll-reveal">
+                    <div class="number">04</div>
+                    <h3>Exit</h3>
+                    <p>Support teams through Series A and beyond. Our portfolio companies become the next generation of biotech leaders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Numbers Section -->
+    <section class="numbers">
+        <div class="container">
+            <h2>By the Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat scroll-reveal">
+                    <div class="value">$25M</div>
+                    <div class="label">Fund I</div>
+                </div>
+                <div class="stat scroll-reveal">
+                    <div class="value">7</div>
+                    <div class="label">Global Houses</div>
+                </div>
+                <div class="stat scroll-reveal">
+                    <div class="value">250+</div>
+                    <div class="label">Founders/Year</div>
+                </div>
+                <div class="stat scroll-reveal">
+                    <div class="value">$10K</div>
+                    <div class="label">First Check</div>
+                </div>
+                <div class="stat scroll-reveal">
+                    <div class="value">$100K</div>
+                    <div class="label">Follow-On</div>
+                </div>
+                <div class="stat scroll-reveal">
+                    <div class="value">$170B</div>
+                    <div class="label">Patent Cliff by 2030</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Houses -->
+    <section class="houses">
+        <div class="container">
+            <h2>Global Houses</h2>
+            <div class="houses-grid">
+                <div class="house-card scroll-reveal">
+                    <div class="house-flag">🇯🇵</div>
+                    <div class="house-city">Kobe</div>
+                    <div class="house-vertical">Cell Therapy</div>
+                </div>
+                <div class="house-card scroll-reveal">
+                    <div class="house-flag">🇦🇺</div>
+                    <div class="house-city">Australia</div>
+                    <div class="house-vertical">Clinical Trials</div>
+                </div>
+                <div class="house-card scroll-reveal">
+                    <div class="house-flag">🇺🇸</div>
+                    <div class="house-city">New York</div>
+                    <div class="house-vertical">Oncology</div>
+                </div>
+                <div class="house-card scroll-reveal">
+                    <div class="house-flag">🇺🇸</div>
+                    <div class="house-city">Boston</div>
+                    <div class="house-vertical">Tools & Platforms</div>
+                </div>
+                <div class="house-card scroll-reveal">
+                    <div class="house-flag">🇲🇽</div>
+                    <div class="house-city">Mexico</div>
+                    <div class="house-vertical">Industrial Bio</div>
+                </div>
+                <div class="house-card scroll-reveal">
+                    <div class="house-flag">🇵🇷</div>
+                    <div class="house-city">Puerto Rico</div>
+                    <div class="house-vertical">Pharma Manufacturing</div>
+                </div>
+                <div class="house-card scroll-reveal">
+                    <div class="house-flag">🇬🇧</div>
+                    <div class="house-city">UK</div>
+                    <div class="house-vertical">Biosecurity</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traction -->
+    <section class="traction">
+        <div class="container">
+            <h2>Traction</h2>
+            <div class="traction-item scroll-reveal">
+                <h3>SF House</h3>
+                <p>Our flagship San Francisco residency currently houses approximately 20 exceptional founders across cell therapy, oncology, and biotech tools verticals.</p>
+            </div>
+            <div class="traction-item scroll-reveal">
+                <h3>Primordia Grants</h3>
+                <p>Active grant disbursement program supporting early-stage founders with non-dilutive capital and technical resources.</p>
+            </div>
+            <div class="traction-item scroll-reveal">
+                <h3>Strategic Partnerships</h3>
+                <p>Strategic partnerships with Astera Institute for biosecurity innovation and BlueDot Impact for global health tech acceleration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member scroll-reveal">
+                    <div class="member-photo">👨‍💼</div>
+                    <div class="member-name">Elliot Roth</div>
+                    <div class="member-role">Founder & Managing Partner</div>
+                    <p class="member-bio">Building the future of biotech at the earliest stage. Passionate about discovering exceptional founders hidden in labs and transforming them into unicorn builders.</p>
+                </div>
+                <div class="team-member scroll-reveal">
+                    <div class="member-photo">👩‍💼</div>
+                    <div class="member-name">Roxana Grunenwald</div>
+                    <div class="member-role">Partner</div>
+                    <p class="member-bio">Deep expertise in biotech operations and founder development. Drives our portfolio companies from pre-seed through Series A scaling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Footer -->
+    <section class="cta">
+        <div class="container">
+            <h2>Interested? Let's Talk.</h2>
+            <p>We're always looking for exceptional founders and partners who share our vision of democratizing biotech innovation.</p>
+            <a href="mailto:er.creates@gmail.com" class="button button-secondary">Request Deck</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://twitter.com" title="Twitter">𝕏</a>
+            <a href="https://linkedin.com" title="LinkedIn">in</a>
+            <a href="mailto:er.creates@gmail.com" title="Email">✉</a>
+        </div>
+        <p>&copy; 2026 Biopunk VC. All rights reserved. Building the future of biotech, one founder at a time.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll behavior and scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all scroll-reveal elements
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth navigation for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add animation delay to staggered elements
+        document.querySelectorAll('.step, .stat, .house-card, .traction-item, .team-member').forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>

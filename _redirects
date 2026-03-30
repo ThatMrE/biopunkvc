@@ -1,0 +1,8 @@
+# Netlify Redirects Configuration for Biopunk VC
+
+# Redirect www.biopunkvc.com to biopunkvc.com
+https://www.biopunkvc.com/* https://biopunkvc.com/:splat 301!
+https://www.biopunkvc.com https://biopunkvc.com 301!
+
+# Catch-all for single-page app - route all non-existent paths to index.html
+/* /index.html 200

@@ -1,0 +1,51 @@
+# Netlify Configuration for Biopunk VC
+
+[build]
+  publish = "/"
+  command = ""
+
+# Redirect www to root domain
+[[redirects]]
+  from = "https://www.biopunkvc.com/*"
+  to = "https://biopunkvc.com/:splat"
+  status = 301
+  force = true
+
+# Redirect root www subdomain
+[[redirects]]
+  from = "https://www.biopunkvc.com"
+  to = "https://biopunkvc.com"
+  status = 301
+  force = true
+
+# Cache static assets
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# HTML files should not be cached
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Custom error page
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  environment = { CONTEXT = "production" }
+
+[context.deploy-preview]
+  environment = { CONTEXT = "deploy-preview" }
+
+[context.branch-deploy]
+  environment = { CONTEXT = "branch-deploy" }
