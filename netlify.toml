@@ -1,51 +1,47 @@
-# Netlify Configuration for Biopunk VC
+# Netlify config — biopunk.vc / biopunkvc.com
+# Static site (no build step). The Early-Stage Biotech Capital Map.
 
 [build]
-  publish = "/"
+  publish = "."
   command = ""
 
-# Redirect www to root domain
+# --- Redirect www -> apex ---
 [[redirects]]
   from = "https://www.biopunkvc.com/*"
   to = "https://biopunkvc.com/:splat"
   status = 301
   force = true
 
-# Redirect root www subdomain
-[[redirects]]
-  from = "https://www.biopunkvc.com"
-  to = "https://biopunkvc.com"
-  status = 301
-  force = true
+# --- Long-cache fingerprint-free static assets are fine to revalidate;
+#     but the DATA and HTML must stay fresh so the map is "continuously updating". ---
 
-# Cache static assets
+# Fonts/images etc. (none bundled today, but safe default for /assets images)
 [[headers]]
-  for = "/*"
+  for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
     X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
-# HTML files should not be cached
+# The dataset must never be stale — it changes as sources are added.
+[[headers]]
+  for = "/assets/data.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# HTML should revalidate frequently.
 [[headers]]
   for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=3600"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
-# Custom error page
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Security headers site-wide.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
 
 [context.production]
   environment = { CONTEXT = "production" }
-
-[context.deploy-preview]
-  environment = { CONTEXT = "deploy-preview" }
-
-[context.branch-deploy]
-  environment = { CONTEXT = "branch-deploy" }
