@@ -180,8 +180,10 @@ section { padding: 70px 0; }
 .chip .cnt { opacity: .6; font-weight: 500; margin-left: 4px; }
 
 .controls-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; flex-wrap: wrap; gap: 10px; }
-.result-count { font-size: 14px; color: var(--muted); }
+.result-count { font-size: 14px; color: var(--muted); margin-right: auto; }
 .result-count b { color: var(--green); font-family: var(--ff-head); }
+.open-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); cursor: pointer; user-select: none; }
+.open-toggle input { accent-color: var(--green); width: 15px; height: 15px; cursor: pointer; }
 .clear-btn { background: none; border: none; color: var(--pink); font-size: 13px; cursor: pointer; font-family: var(--ff-head); }
 .clear-btn:hover { text-decoration: underline; }
 
@@ -206,6 +208,11 @@ section { padding: 70px 0; }
 }
 .badge-type { color: #fff; }
 .badge-cap { background: var(--bg-3); color: var(--muted); border-color: var(--line); }
+.badge-call { background: var(--bg-3); border: 1px solid var(--line); color: var(--muted); }
+.badge-call[data-call="Rolling"]   { color: var(--green);  border-color: rgba(0,255,136,.35);  background: rgba(0,255,136,.08); }
+.badge-call[data-call="Cohorts"]   { color: var(--violet); border-color: rgba(179,136,255,.35); background: rgba(179,136,255,.08); }
+.badge-call[data-call="Recurring"] { color: var(--amber);  border-color: rgba(255,194,75,.35);  background: rgba(255,194,75,.08); }
+.badge-call[data-call="Closed"]    { color: var(--muted-2); border-color: var(--line); background: transparent; }
 .card-blurb { font-size: 14px; color: var(--muted); line-height: 1.55; flex: 1; }
 .card-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--muted-2); border-top: 1px solid var(--line); padding-top: 12px; }
 .card-meta span { display: inline-flex; align-items: center; gap: 5px; }
@@ -215,6 +222,7 @@ section { padding: 70px 0; }
 /* Type color accents (border-left) */
 .card[data-type="Accelerator"]        { border-left: 3px solid var(--green); }
 .card[data-type="Pre-seed/Seed VC"]   { border-left: 3px solid var(--pink); }
+.card[data-type="Corporate VC"]       { border-left: 3px solid #6EA8FE; }
 .card[data-type="Venture Studio"]     { border-left: 3px solid var(--violet); }
 .card[data-type="Government Grant"]   { border-left: 3px solid var(--cyan); }
 .card[data-type="Philanthropic Grant"]{ border-left: 3px solid var(--amber); }
@@ -225,6 +233,7 @@ section { padding: 70px 0; }
 
 .badge-type[data-type="Accelerator"]        { background: rgba(0,255,136,.15); color: var(--green); }
 .badge-type[data-type="Pre-seed/Seed VC"]   { background: rgba(255,51,102,.15); color: #ff6b8f; }
+.badge-type[data-type="Corporate VC"]       { background: rgba(110,168,254,.15); color: #6EA8FE; }
 .badge-type[data-type="Venture Studio"]     { background: rgba(179,136,255,.15); color: var(--violet); }
 .badge-type[data-type="Government Grant"]   { background: rgba(53,224,240,.13); color: var(--cyan); }
 .badge-type[data-type="Philanthropic Grant"]{ background: rgba(255,194,75,.14); color: var(--amber); }

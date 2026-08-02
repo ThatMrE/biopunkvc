@@ -1,7 +1,13 @@
 /* ============================================================
    BIOPUNK — The Early-Stage Biotech Capital Map
    Community-maintained dataset of the earliest financing for biotech.
-   Each entry: { id, name, type, capital, stage, amount, geo, focus, url, hq, blurb }
+   Each entry: { id, name, type, capital, stage, amount, geo, focus, url, hq, blurb, call }
+     type:    Accelerator | Pre-seed/Seed VC | Corporate VC | Venture Studio |
+              Government Grant | Philanthropic Grant | Fellowship | Angel/Syndicate |
+              Prize/Competition | Crowdfunding
+     capital: Non-dilutive | Equity | Convertible/SAFE | Mixed
+     stage:   Idea | Pre-seed | Pre-seed–Seed | Seed
+     call:    Rolling (apply anytime) | Cohorts (batch intake) | Recurring (cyclical call) | Closed
    Add or correct an entry via the form on the site, or open a PR:
    https://github.com/ThatMrE/biopunkvc  (edit this file, keep it valid JS)
    ============================================================ */
@@ -9,6 +15,21 @@ window.CAPITAL_MAP = {
   updated: "August 2026",
   sources: [
   {
+    "id": "admare-tx-accelerator",
+    "name": "adMare Tx Accelerator",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies",
+    "geo": "Canada",
+    "focus": "Early-stage therapeutics ventures",
+    "url": "https://www.admarebio.com/en",
+    "hq": "Montreal / Toronto, Canada",
+    "blurb": "adMare accelerates promising early-stage Canadian therapeutics ventures with capital, drug-development expertise, lab space and milestone-driven support.",
+    "call": "Rolling"
+  },
+  {
+    "id": "bakar-labs-uc-berkeley",
     "name": "Bakar Labs (UC Berkeley)",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -19,9 +40,24 @@ window.CAPITAL_MAP = {
     "url": "https://bakarlabs.org",
     "hq": "Berkeley, CA",
     "blurb": "UC Berkeley incubator renting flexible wet-lab space and services to early biotech startups; takes no equity for access.",
-    "id": "bakar-labs-uc-berkeley"
+    "call": "Cohorts"
   },
   {
+    "id": "baselaunch",
+    "name": "BaseLaunch",
+    "type": "Accelerator",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Up to CHF 500K",
+    "geo": "Switzerland",
+    "focus": "Therapeutics and drug-discovery platforms",
+    "url": "https://baselaunch.ch/",
+    "hq": "Basel, Switzerland",
+    "blurb": "Swiss accelerator gives academic and biotech founders non-dilutive funding plus expertise to de-risk breakthrough therapeutics toward Series A.",
+    "call": "Rolling"
+  },
+  {
+    "id": "bayer-g4a",
     "name": "Bayer G4A",
     "type": "Accelerator",
     "capital": "Mixed",
@@ -32,9 +68,10 @@ window.CAPITAL_MAP = {
     "url": "https://g4a.health",
     "hq": "Berlin, Germany",
     "blurb": "Bayer's digital-health partnerships program funds and coaches early startups toward commercial collaborations with the pharma company.",
-    "id": "bayer-g4a"
+    "call": "Cohorts"
   },
   {
+    "id": "berkeley-skydeck",
     "name": "Berkeley SkyDeck",
     "type": "Accelerator",
     "capital": "Convertible/SAFE",
@@ -45,9 +82,24 @@ window.CAPITAL_MAP = {
     "url": "https://skydeck.berkeley.edu",
     "hq": "Berkeley, CA",
     "blurb": "Six-month cohort invests roughly $200K via SAFE for ~7.5%, adding advisors and in-kind resources to science founders.",
-    "id": "berkeley-skydeck"
+    "call": "Cohorts"
   },
   {
+    "id": "beyond-next-ventures-brave",
+    "name": "Beyond Next Ventures (BRAVE)",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed",
+    "amount": "Varies",
+    "geo": "Japan",
+    "focus": "Deep-tech and life-science research",
+    "url": "https://beyondnextventures.com/incubation/",
+    "hq": "Tokyo, Japan",
+    "blurb": "Japan's largest deep-tech accelerator incubates researcher founders in life sciences with gap funding, expertise and investment.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "bioinnovation-institute-bii",
     "name": "BioInnovation Institute (BII)",
     "type": "Accelerator",
     "capital": "Convertible/SAFE",
@@ -58,9 +110,24 @@ window.CAPITAL_MAP = {
     "url": "https://bioinnovationinstitute.com",
     "hq": "Copenhagen, Denmark",
     "blurb": "Novo Nordisk Foundation-backed incubator giving early founders a founder-friendly convertible loan plus 18-month lab-based incubation and support.",
-    "id": "bioinnovation-institute-bii"
+    "call": "Cohorts"
   },
   {
+    "id": "c-camp-centre-for-cellular-and-molecular-platforms",
+    "name": "C-CAMP (Centre for Cellular and Molecular Platforms)",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "₹25L–₹1Cr (~$30K–$120K)",
+    "geo": "India",
+    "focus": "Life-sciences bioincubation and seed",
+    "url": "https://www.ccamp.res.in/incubation",
+    "hq": "Bengaluru, India",
+    "blurb": "Bengaluru bioincubator backs earliest life-sciences ventures with grants, NIDHI seed investment, labs and its national entrepreneurship competition.",
+    "call": "Recurring"
+  },
+  {
+    "id": "creative-destruction-lab-cdl",
     "name": "Creative Destruction Lab (CDL)",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -71,9 +138,24 @@ window.CAPITAL_MAP = {
     "url": "https://creativedestructionlab.com",
     "hq": "Toronto, Canada",
     "blurb": "Non-profit objectives-based mentoring program connecting seed-stage science founders with entrepreneurs, investors, and scientists; takes no equity itself.",
-    "id": "creative-destruction-lab-cdl"
+    "call": "Cohorts"
   },
   {
+    "id": "cureator-brandon-biocatalyst",
+    "name": "CUREator (Brandon BioCatalyst)",
+    "type": "Accelerator",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "A$1M–A$5M",
+    "geo": "Australia",
+    "focus": "Therapeutics discovery and preclinical",
+    "url": "https://brandonbiocatalyst.com/cureator/",
+    "hq": "Melbourne, Australia",
+    "blurb": "National biotech incubator giving early Australian therapeutics ventures non-dilutive grants and support from discovery through preclinical stages.",
+    "call": "Recurring"
+  },
+  {
+    "id": "eit-health",
     "name": "EIT Health",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -84,9 +166,10 @@ window.CAPITAL_MAP = {
     "url": "https://eithealth.eu",
     "hq": "Munich, Germany",
     "blurb": "EU-backed network runs Incubate/Validate/Scale programs and awards funding to early European life-science and healthtech startups.",
-    "id": "eit-health"
+    "call": "Cohorts"
   },
   {
+    "id": "illumina-accelerator",
     "name": "Illumina Accelerator",
     "type": "Accelerator",
     "capital": "Equity",
@@ -97,9 +180,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.illumina.com/company/about-us/illumina-accelerator.html",
     "hq": "San Diego, CA",
     "blurb": "Twice-yearly cycles give genomics startups seed investment, sequencing systems, reagents, and lab space beside Illumina campuses.",
-    "id": "illumina-accelerator"
+    "call": "Cohorts"
   },
   {
+    "id": "indiebio-sosv",
     "name": "IndieBio (SOSV)",
     "type": "Accelerator",
     "capital": "Mixed",
@@ -110,9 +194,10 @@ window.CAPITAL_MAP = {
     "url": "https://indiebio.co",
     "hq": "San Francisco / New York (SOSV)",
     "blurb": "Funds first-time science founders at company formation with $250K for 8% plus follow-on SAFE and wet-lab space.",
-    "id": "indiebio-sosv"
+    "call": "Cohorts"
   },
   {
+    "id": "jlabs-johnson-johnson-innovation",
     "name": "JLABS (Johnson & Johnson Innovation)",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -123,9 +208,10 @@ window.CAPITAL_MAP = {
     "url": "https://jlabs.jnjinnovation.com",
     "hq": "Multiple (South San Francisco lead)",
     "blurb": "No-strings incubator giving startups low-cost lab space and mentorship while taking no equity or IP.",
-    "id": "jlabs-johnson-johnson-innovation"
+    "call": "Cohorts"
   },
   {
+    "id": "labcentral",
     "name": "LabCentral",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -136,9 +222,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.labcentral.org",
     "hq": "Cambridge, MA",
     "blurb": "Non-profit shared-lab launchpad renting fully-equipped bench-to-suite space to early biotech startups without taking equity.",
-    "id": "labcentral"
+    "call": "Cohorts"
   },
   {
+    "id": "m2d2-umass",
     "name": "M2D2 (UMass)",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -149,9 +236,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.uml.edu/research/m2d2/",
     "hq": "Lowell, MA",
     "blurb": "University incubator and $200K Challenge awarding early medtech/biotech founders cash prizes, lab space, and commercialization support.",
-    "id": "m2d2-umass"
+    "call": "Cohorts"
   },
   {
+    "id": "masschallenge-healthtech",
     "name": "MassChallenge HealthTech",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -162,9 +250,10 @@ window.CAPITAL_MAP = {
     "url": "https://masschallenge.org/programs-healthtech/",
     "hq": "Boston, MA",
     "blurb": "Zero-equity accelerator connecting early digital-health startups with industry champions, mentorship, and equity-free cash prizes.",
-    "id": "masschallenge-healthtech"
+    "call": "Cohorts"
   },
   {
+    "id": "nucleate",
     "name": "Nucleate",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -175,9 +264,10 @@ window.CAPITAL_MAP = {
     "url": "https://nucleate.org",
     "hq": "Boston, MA",
     "blurb": "Equity-free program pairing PhD/postdoc founders with mentorship, legal support, and subsidized perks to spin ventures out of academia.",
-    "id": "nucleate"
+    "call": "Cohorts"
   },
   {
+    "id": "petri-pillar-vc",
     "name": "Petri (Pillar VC)",
     "type": "Accelerator",
     "capital": "Equity",
@@ -188,9 +278,10 @@ window.CAPITAL_MAP = {
     "url": "https://petri.bio",
     "hq": "Boston, MA",
     "blurb": "Backs founders at the frontier of biology and engineering with seed capital, lab space, and hands-on company building.",
-    "id": "petri-pillar-vc"
+    "call": "Cohorts"
   },
   {
+    "id": "plug-and-play-health",
     "name": "Plug and Play Health",
     "type": "Accelerator",
     "capital": "Equity",
@@ -201,9 +292,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.plugandplaytechcenter.com/health",
     "hq": "Sunnyvale, CA",
     "blurb": "Corporate-innovation platform accelerating health/biotech startups with pilots, investor access, and selective direct investment.",
-    "id": "plug-and-play-health"
+    "call": "Cohorts"
   },
   {
+    "id": "start-codon",
     "name": "Start Codon",
     "type": "Accelerator",
     "capital": "Convertible/SAFE",
@@ -214,9 +306,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.startcodon.co",
     "hq": "Cambridge, UK",
     "blurb": "Genentech-backed accelerator investing ~£250K SAFE for ~8% plus lab space to translate UK life-science IP into companies.",
-    "id": "start-codon"
+    "call": "Cohorts"
   },
   {
+    "id": "start-up-chile",
+    "name": "Start-Up Chile",
+    "type": "Accelerator",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$15K–$100K",
+    "geo": "Chile / Global",
+    "focus": "Early tech and biotech ventures",
+    "url": "https://startupchile.org/en/",
+    "hq": "Santiago, Chile",
+    "blurb": "Government accelerator gives idea- and MVP-stage founders worldwide equity-free grants and a Chilean base to go global.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "startx-stanford-startx-med",
     "name": "StartX (Stanford) / StartX Med",
     "type": "Accelerator",
     "capital": "Non-dilutive",
@@ -227,9 +334,10 @@ window.CAPITAL_MAP = {
     "url": "https://startx.com",
     "hq": "Palo Alto, CA",
     "blurb": "Non-profit, zero-equity accelerator for Stanford-affiliated founders offering mentorship, lab access, and resources across the medical innovation lifecycle.",
-    "id": "startx-stanford-startx-med"
+    "call": "Cohorts"
   },
   {
+    "id": "techstars-life-science-physical-health",
     "name": "Techstars (Life Science / Physical Health)",
     "type": "Accelerator",
     "capital": "Convertible/SAFE",
@@ -240,9 +348,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.techstars.com",
     "hq": "Boulder, CO",
     "blurb": "Mentorship-driven 13-week programs invest via SAFE/CEA into early health and life-science founders across global vertical tracks.",
-    "id": "techstars-life-science-physical-health"
+    "call": "Cohorts"
   },
   {
+    "id": "venture-kick",
+    "name": "Venture Kick",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Idea",
+    "amount": "Up to CHF 150K",
+    "geo": "Switzerland",
+    "focus": "Academic spin-off startups",
+    "url": "https://www.venturekick.ch/",
+    "hq": "Zurich, Switzerland",
+    "blurb": "Three-stage program funds pre-commercial Swiss academic spin-offs from idea to company with grants and convertible loans.",
+    "call": "Rolling"
+  },
+  {
+    "id": "y-combinator",
     "name": "Y Combinator",
     "type": "Accelerator",
     "capital": "Convertible/SAFE",
@@ -253,9 +376,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.ycombinator.com",
     "hq": "Mountain View, CA",
     "blurb": "Standard deal invests $500K on SAFEs into earliest-stage founders, including a growing cohort of biotech and health startups.",
-    "id": "y-combinator"
+    "call": "Cohorts"
   },
   {
+    "id": "1517-fund",
     "name": "1517 Fund",
     "type": "Pre-seed/Seed VC",
     "capital": "Mixed",
@@ -266,9 +390,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.1517fund.com",
     "hq": "San Francisco, CA",
     "blurb": "Backs young dropouts and renegade scientists with grants and pre-seed checks for deep-tech and biotech moonshots.",
-    "id": "1517-fund"
+    "call": "Rolling"
   },
   {
+    "id": "8vc",
     "name": "8VC",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -279,9 +404,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.8vc.com",
     "hq": "Austin, TX",
     "blurb": "Runs a dedicated seed fund backing life-science and tech-bio companies at the crossover of IT and biology.",
-    "id": "8vc"
+    "call": "Rolling"
   },
   {
+    "id": "a16z-bio-plus-health",
     "name": "a16z Bio + Health",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -292,9 +418,10 @@ window.CAPITAL_MAP = {
     "url": "https://a16z.com/bio-health/",
     "hq": "Menlo Park, CA",
     "blurb": "Andreessen Horowitz's bio franchise leads seed rounds in therapeutics platforms and tech-enabled health at company creation.",
-    "id": "a16z-bio-plus-health"
+    "call": "Rolling"
   },
   {
+    "id": "age1",
     "name": "age1",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -305,9 +432,10 @@ window.CAPITAL_MAP = {
     "url": "https://age1.com",
     "hq": "San Francisco, CA",
     "blurb": "Successor to the Longevity Fund, backing first-money-in founders extending healthy human lifespan.",
-    "id": "age1"
+    "call": "Rolling"
   },
   {
+    "id": "alix-ventures",
     "name": "Alix Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -318,9 +446,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.alix.vc",
     "hq": "San Francisco, CA",
     "blurb": "Thesis-driven TechBio fund writing early checks into engineering-biology startups across tools, diagnostics, and therapeutics.",
-    "id": "alix-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "amino-collective",
     "name": "Amino Collective",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -331,9 +460,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.aminocollective.com",
     "hq": "Berlin, Germany",
     "blurb": "European seed firm backing health and bio founders in AI drug discovery, synthetic biology, and diagnostics.",
-    "id": "amino-collective"
+    "call": "Rolling"
   },
   {
+    "id": "boom-capital-ventures",
     "name": "Boom Capital Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Convertible/SAFE",
@@ -344,9 +474,10 @@ window.CAPITAL_MAP = {
     "url": "https://boomcap.co",
     "hq": "San Francisco, CA",
     "blurb": "First-believer checks for deeply technical, under-networked founders in genomics, synthetic biology, and frontier chemistries.",
-    "id": "boom-capital-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "cantos",
     "name": "Cantos",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -357,9 +488,10 @@ window.CAPITAL_MAP = {
     "url": "https://cantos.vc",
     "hq": "San Francisco, CA",
     "blurb": "First-check partner to technical founders building near-frontier deep tech, including computational and synthetic biology.",
-    "id": "cantos"
+    "call": "Rolling"
   },
   {
+    "id": "civilization-ventures",
     "name": "Civilization Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -370,9 +502,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.civilizationventures.com",
     "hq": "San Francisco, CA",
     "blurb": "Backs early founders in genomics, diagnostics, and computational biology, often writing among the first institutional checks.",
-    "id": "civilization-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "compound",
     "name": "Compound",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -383,9 +516,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.compound.vc",
     "hq": "New York, NY",
     "blurb": "Research-driven firm investing early in deep technology and biotech founders, treating venture as applied science.",
-    "id": "compound"
+    "call": "Rolling"
   },
   {
+    "id": "cure-ventures",
     "name": "Cure Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -396,9 +530,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.curevc.com",
     "hq": "Boston, MA",
     "blurb": "Builds early-stage therapeutics companies through diligent seed rounds with embedded operators de-risking new science.",
-    "id": "cure-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "dcvc-bio",
     "name": "DCVC Bio",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -409,9 +544,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.dcvc.com",
     "hq": "San Francisco, CA",
     "blurb": "Leads early rounds in computation-enhanced biology platforms spanning drug discovery, synthetic biology, and life-science tools.",
-    "id": "dcvc-bio"
+    "call": "Rolling"
   },
   {
+    "id": "digitalis-ventures",
     "name": "Digitalis Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -422,9 +558,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.digitalisventures.com",
     "hq": "New York, NY",
     "blurb": "Invests early in breakthrough science across human and animal health, life sciences, and health technologies.",
-    "id": "digitalis-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "dimension",
     "name": "Dimension",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -435,9 +572,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.dimensioncap.com",
     "hq": "San Francisco, CA",
     "blurb": "Leads seed rounds at the interface of life science and computation, from tools to tech-powered therapeutics.",
-    "id": "dimension"
+    "call": "Rolling"
   },
   {
+    "id": "fifty-years",
     "name": "Fifty Years",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -448,9 +586,10 @@ window.CAPITAL_MAP = {
     "url": "https://fiftyyears.com",
     "hq": "San Francisco, CA",
     "blurb": "Backs and often incubates scientist-founders using synthetic biology and deep tech to tackle humanity's biggest problems.",
-    "id": "fifty-years"
+    "call": "Rolling"
   },
   {
+    "id": "freeflow-ventures",
     "name": "Freeflow Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -461,9 +600,10 @@ window.CAPITAL_MAP = {
     "url": "https://freeflow.io",
     "hq": "Pasadena, CA",
     "blurb": "Backs Caltech- and Berkeley-linked scientists building deep tech for human and planetary health at pre-seed and seed.",
-    "id": "freeflow-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "genoa-ventures",
     "name": "Genoa Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -474,9 +614,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.genoavc.com",
     "hq": "San Francisco, CA",
     "blurb": "Seed and Series A firm backing bio-based companies at the convergence of biology and technology beyond therapeutics.",
-    "id": "genoa-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "humba-ventures",
     "name": "Humba Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -487,9 +628,10 @@ window.CAPITAL_MAP = {
     "url": "https://humbaventures.com",
     "hq": "San Francisco, CA",
     "blurb": "Susa's deep-tech sister fund writing first pre-seed and seed checks into biotech, robotics, energy, and defense.",
-    "id": "humba-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "kdt-ventures",
     "name": "KdT Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -500,9 +642,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.kdtventures.com",
     "hq": "North Carolina / Austin, TX",
     "blurb": "Often the first institutional check into frontier-science companies spanning therapeutics, tools, and molecular engineering.",
-    "id": "kdt-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "lux-capital",
     "name": "Lux Capital",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -513,9 +656,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.luxcapital.com",
     "hq": "New York, NY",
     "blurb": "Backs counter-conventional science and biotech founders early, often mining academia to co-create companies at seed.",
-    "id": "lux-capital"
+    "call": "Rolling"
   },
   {
+    "id": "metaplanet",
     "name": "Metaplanet",
     "type": "Pre-seed/Seed VC",
     "capital": "Mixed",
@@ -526,9 +670,10 @@ window.CAPITAL_MAP = {
     "url": "https://metaplanet.com",
     "hq": "Tallinn, Estonia",
     "blurb": "Jaan Tallinn's long-horizon fund making early global checks into deep-tech and biotech founders addressing hard problems.",
-    "id": "metaplanet"
+    "call": "Rolling"
   },
   {
+    "id": "modi-ventures",
     "name": "Modi Ventures",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -539,9 +684,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.modivc.com",
     "hq": "Houston, TX",
     "blurb": "Backs early companies at the intersection of AI, biology, and medicine from the Texas Medical Center.",
-    "id": "modi-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "not-boring-capital",
     "name": "Not Boring Capital",
     "type": "Pre-seed/Seed VC",
     "capital": "Convertible/SAFE",
@@ -552,9 +698,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.notboring.co",
     "hq": "New York, NY",
     "blurb": "Packy McCormick's solo-GP fund backing hard sci-fi startups, with a dedicated biotech partner and early checks.",
-    "id": "not-boring-capital"
+    "call": "Rolling"
   },
   {
+    "id": "pillar-vc",
     "name": "Pillar VC",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -565,9 +712,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.pillar.vc",
     "hq": "Boston, MA",
     "blurb": "Leads pre-seed and seed rounds for bio, synthetic biology, and deep tech founders across the Boston ecosystem.",
-    "id": "pillar-vc"
+    "call": "Rolling"
   },
   {
+    "id": "playground-global",
     "name": "Playground Global",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -578,9 +726,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.playground.vc",
     "hq": "Palo Alto, CA",
     "blurb": "Often first or lead investor in seed deep-tech founders, including engineered-biology companies at the atoms-bits-AI intersection.",
-    "id": "playground-global"
+    "call": "Rolling"
   },
   {
+    "id": "refactor-capital",
     "name": "Refactor Capital",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -591,9 +740,10 @@ window.CAPITAL_MAP = {
     "url": "https://refactor.com",
     "hq": "San Francisco, CA",
     "blurb": "Solo-GP seed firm backing scientist-founders in bio, climate, and hard tech from day one.",
-    "id": "refactor-capital"
+    "call": "Rolling"
   },
   {
+    "id": "section-32",
     "name": "Section 32",
     "type": "Pre-seed/Seed VC",
     "capital": "Equity",
@@ -604,9 +754,290 @@ window.CAPITAL_MAP = {
     "url": "https://www.section32.com",
     "hq": "San Diego, CA",
     "blurb": "Bill Maris's firm backing seed and Series A companies at the frontiers of technology, healthcare, and biotech.",
-    "id": "section-32"
+    "call": "Rolling"
   },
   {
+    "id": "abbvie-ventures",
+    "name": "AbbVie Ventures",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$3M–$30M",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://www.abbvie.com/science/partner-with-us/abbvie-ventures.html",
+    "hq": "North Chicago",
+    "blurb": "Backs discovery and preclinical therapeutics companies at seed and Series A in oncology, immunology and neuroscience.",
+    "call": "Rolling"
+  },
+  {
+    "id": "alexandria-venture-investments",
+    "name": "Alexandria Venture Investments",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Varies",
+    "geo": "US",
+    "focus": "Therapeutics / tools",
+    "url": "https://www.alexandrialaunchlabs.com/capital/",
+    "hq": "Pasadena/New York",
+    "blurb": "Provides seed capital to life-science startups, often paired with move-in-ready lab space via Alexandria LaunchLabs.",
+    "call": "Rolling"
+  },
+  {
+    "id": "amgen-ventures",
+    "name": "Amgen Ventures",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$2M–$10M",
+    "geo": "US",
+    "focus": "Therapeutics",
+    "url": "https://www.amgen.com/science/amgen-ventures",
+    "hq": "San Francisco",
+    "blurb": "Funds early-stage biotechs developing human therapeutics in oncology, inflammation, neuroscience and cardiovascular, from seed onward.",
+    "call": "Rolling"
+  },
+  {
+    "id": "astellas-venture-management",
+    "name": "Astellas Venture Management",
+    "type": "Corporate VC",
+    "capital": "Mixed",
+    "stage": "Seed",
+    "amount": "Lab space + capital",
+    "geo": "US/Global",
+    "focus": "Therapeutics",
+    "url": "https://www.astellasventure.com",
+    "hq": "South San Francisco",
+    "blurb": "Backs early-stage therapeutics; annual Future Innovator Prize awards lab space and support to emerging life-science founders.",
+    "call": "Recurring"
+  },
+  {
+    "id": "boehringer-ingelheim-venture-fund",
+    "name": "Boehringer Ingelheim Venture Fund",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$3M–$30M",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://www.boehringer-ingelheim-venture.com",
+    "hq": "Ingelheim",
+    "blurb": "Dedicated seed/Series A investor with company-formation expertise, backing preclinical platforms and first-in-class therapeutics.",
+    "call": "Rolling"
+  },
+  {
+    "id": "eli-lilly-catalyze360-gateway-labs",
+    "name": "Eli Lilly Catalyze360 (Gateway Labs)",
+    "type": "Corporate VC",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "Space + partnering",
+    "geo": "US/Global",
+    "focus": "Therapeutics",
+    "url": "https://www.lilly.com/science/partners/catalyze-360",
+    "hq": "Indianapolis",
+    "blurb": "Engages preclinical biotechs early with Gateway Labs space, strategic capital and R&D access across therapeutic areas.",
+    "call": "Rolling"
+  },
+  {
+    "id": "gv-google-ventures",
+    "name": "GV (Google Ventures)",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Varies",
+    "geo": "US/EU",
+    "focus": "Therapeutics / health tech",
+    "url": "https://www.gv.com",
+    "hq": "Mountain View",
+    "blurb": "Alphabet's fund backs life-science and health startups from seed onward, with physician and PhD investing partners.",
+    "call": "Rolling"
+  },
+  {
+    "id": "leaps-by-bayer",
+    "name": "Leaps by Bayer",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://leaps.bayer.com",
+    "hq": "Berlin/Leverkusen",
+    "blurb": "Bayer's impact arm co-founds and funds early ventures pursuing breakthrough advances in biotech and health.",
+    "call": "Rolling"
+  },
+  {
+    "id": "m-ventures-merck-kgaa",
+    "name": "M Ventures (Merck KGaA)",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Varies",
+    "geo": "Global",
+    "focus": "Therapeutics / tools",
+    "url": "https://www.m-ventures.com",
+    "hq": "Amsterdam/Darmstadt",
+    "blurb": "Merck KGaA's fund leads seed-stage company creation and early syndicated rounds in drug development and life-science tools.",
+    "call": "Rolling"
+  },
+  {
+    "id": "merck-digital-sciences-studio",
+    "name": "Merck Digital Sciences Studio",
+    "type": "Corporate VC",
+    "capital": "Convertible/SAFE",
+    "stage": "Pre-seed–Seed",
+    "amount": "$100K",
+    "geo": "North America",
+    "focus": "Digital health",
+    "url": "https://www.mds.studio/",
+    "hq": "Montreal/Boston",
+    "blurb": "Nine-month accelerator giving early digital-health and drug-discovery startups a SAFE, mentoring and Merck scientific expertise.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "mrl-ventures-fund-merck-co",
+    "name": "MRL Ventures Fund (Merck & Co.)",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Varies",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://www.merck.com/research/business-development-and-licensing/mrl-ventures-fund/",
+    "hq": "Cambridge, MA",
+    "blurb": "Merck's early-stage fund creates and backs seed and preclinical therapeutics companies across all modalities from breakthrough science.",
+    "call": "Rolling"
+  },
+  {
+    "id": "novartis-venture-fund",
+    "name": "Novartis Venture Fund",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Varies",
+    "geo": "US/EU/Israel",
+    "focus": "Therapeutics",
+    "url": "https://www.nvfund.com",
+    "hq": "Basel",
+    "blurb": "Backs seed-stage therapeutics, device and diagnostics companies, taking active board roles from early formation.",
+    "call": "Rolling"
+  },
+  {
+    "id": "novo-holdings-seed-investments",
+    "name": "Novo Holdings — Seed Investments",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$1M–$25M",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://novoholdings.dk/investments/seed-investments",
+    "hq": "Copenhagen",
+    "blurb": "Co-creates and backs seed-stage therapeutics companies via its SeedLab and Entrepreneurs-in-Residence, turning early science into biotech startups.",
+    "call": "Rolling"
+  },
+  {
+    "id": "ono-venture-investment",
+    "name": "Ono Venture Investment",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Varies",
+    "geo": "US/Japan",
+    "focus": "Therapeutics",
+    "url": "https://www.onoventure.com",
+    "hq": "San Francisco/Osaka",
+    "blurb": "Ono Pharmaceutical's arm invests at seed and Series A in oncology, immunology and neurology companies.",
+    "call": "Rolling"
+  },
+  {
+    "id": "pfizer-ventures",
+    "name": "Pfizer Ventures",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://www.pfizer.com/about/partners/venture-investments",
+    "hq": "New York",
+    "blurb": "Invests pre-seed through Series B in biopharma companies advancing breakthrough science aligned with Pfizer's strategic priorities.",
+    "call": "Rolling"
+  },
+  {
+    "id": "regeneron-ventures",
+    "name": "Regeneron Ventures",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Varies",
+    "geo": "US",
+    "focus": "Therapeutics / tools",
+    "url": "https://www.regeneronventures.com",
+    "hq": "Greenwich, CT",
+    "blurb": "Stage-agnostic corporate fund backing early-stage biotech, drug-discovery platforms, devices and enabling technologies.",
+    "call": "Rolling"
+  },
+  {
+    "id": "roche-venture-fund",
+    "name": "Roche Venture Fund",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "CHF 3M–10M",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://www.roche.com/venturefund",
+    "hq": "Basel",
+    "blurb": "Invests in preclinical and early-stage life-science companies, often first financing rounds, sometimes alongside Roche/Genentech collaborations.",
+    "call": "Rolling"
+  },
+  {
+    "id": "sanofi-idea-tech-awards",
+    "name": "Sanofi iDEA-TECH Awards",
+    "type": "Corporate VC",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$150K",
+    "geo": "US/EU/China",
+    "focus": "Data science tools",
+    "url": "https://www.sanofi.com/en/our-science/external-innovation/north-america/idea-itech",
+    "hq": "Cambridge, MA",
+    "blurb": "Recurring seed grants funding academics and early startups turning digital and data-science tools into R&D solutions.",
+    "call": "Recurring"
+  },
+  {
+    "id": "sanofi-ventures",
+    "name": "Sanofi Ventures",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Varies",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://www.sanofiventures.com",
+    "hq": "Cambridge, MA",
+    "blurb": "Invests from seed onward in early-stage biotech and digital-health companies built on transformative science.",
+    "call": "Rolling"
+  },
+  {
+    "id": "takeda-ventures",
+    "name": "Takeda Ventures",
+    "type": "Corporate VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$1M–$5M",
+    "geo": "Global",
+    "focus": "Therapeutics",
+    "url": "https://www.takedaventures.com",
+    "hq": "San Diego",
+    "blurb": "Backs early-stage, preclinical, platform therapeutics complementing Takeda's oncology, rare-disease, neuroscience and GI pipelines.",
+    "call": "Rolling"
+  },
+  {
+    "id": "5am-ventures",
     "name": "5AM Ventures",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -617,9 +1048,10 @@ window.CAPITAL_MAP = {
     "url": "https://5amventures.com",
     "hq": "South San Francisco, CA",
     "blurb": "Its 4:59 Initiative builds companies from basic breakthroughs, generating proof-of-principle data to enable Series A financing.",
-    "id": "5am-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "apple-tree-partners",
     "name": "Apple Tree Partners",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -630,9 +1062,10 @@ window.CAPITAL_MAP = {
     "url": "https://appletreepartners.com",
     "hq": "New York, NY",
     "blurb": "Creates companies from pre-IP ideas and asset spinouts, backing them with EIRs from seed through IPO.",
-    "id": "apple-tree-partners"
+    "call": "Rolling"
   },
   {
+    "id": "arch-venture-partners",
     "name": "ARCH Venture Partners",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -643,9 +1076,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.archventure.com",
     "hq": "Chicago, IL",
     "blurb": "Co-founds breakthrough companies alongside leading scientists, providing patient capital from seed to scale.",
-    "id": "arch-venture-partners"
+    "call": "Rolling"
   },
   {
+    "id": "atlas-venture",
     "name": "Atlas Venture",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -656,9 +1090,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.atlasventure.com",
     "hq": "Cambridge, MA",
     "blurb": "Seed-led firm that founds, seeds and incubates biotechs with EIRs, advancing the best to Series A.",
-    "id": "atlas-venture"
+    "call": "Rolling"
   },
   {
+    "id": "curie-bio",
     "name": "Curie.Bio",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -669,9 +1104,10 @@ window.CAPITAL_MAP = {
     "url": "https://curie.bio",
     "hq": "Cambridge, MA",
     "blurb": "Backs scientist-founders at inception with seed capital plus embedded drug-discovery expert copilots to build companies.",
-    "id": "curie-bio"
+    "call": "Rolling"
   },
   {
+    "id": "deep-science-ventures",
     "name": "Deep Science Ventures",
     "type": "Venture Studio",
     "capital": "Mixed",
@@ -682,9 +1118,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.deepscienceventures.com",
     "hq": "London, UK",
     "blurb": "Applies a solution-pull method, funding cofounders-in-residence for up to 18 months to engineer and form new science companies.",
-    "id": "deep-science-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "flagship-pioneering",
     "name": "Flagship Pioneering",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -695,9 +1132,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.flagshippioneering.com",
     "hq": "Cambridge, MA",
     "blurb": "Conceives and incubates its own newco theses in-house, funding and building platform companies from idea through independent launch.",
-    "id": "flagship-pioneering"
+    "call": "Rolling"
   },
   {
+    "id": "foresite-labs",
     "name": "Foresite Labs",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -708,9 +1146,10 @@ window.CAPITAL_MAP = {
     "url": "https://foresitelabs.com",
     "hq": "South San Francisco, CA",
     "blurb": "Incubation arm of Foresite Capital that founds and builds companies at the intersection of data science and healthcare.",
-    "id": "foresite-labs"
+    "call": "Rolling"
   },
   {
+    "id": "medicxi",
     "name": "Medicxi",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -721,9 +1160,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.medicxi.com",
     "hq": "London, UK",
     "blurb": "Builds asset-centric companies around one or few experimental products, minimizing governance so founders focus on the drug.",
-    "id": "medicxi"
+    "call": "Rolling"
   },
   {
+    "id": "mpm-bioimpact",
     "name": "MPM BioImpact",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -734,9 +1174,10 @@ window.CAPITAL_MAP = {
     "url": "https://mpmbioimpact.com",
     "hq": "Cambridge, MA",
     "blurb": "Uses Entrepreneur Partners and an active company-creation model to build and fund biotechs from scientific breakthroughs.",
-    "id": "mpm-bioimpact"
+    "call": "Rolling"
   },
   {
+    "id": "samsara-biocapital",
     "name": "Samsara BioCapital",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -747,9 +1188,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.samsaracap.com",
     "hq": "Palo Alto, CA",
     "blurb": "Takes a long-term company-building approach, partnering with scientist-entrepreneurs to translate advances into new therapeutics companies.",
-    "id": "samsara-biocapital"
+    "call": "Rolling"
   },
   {
+    "id": "sv-health-investors-dementia-discovery-fund",
     "name": "SV Health Investors (Dementia Discovery Fund)",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -760,9 +1202,10 @@ window.CAPITAL_MAP = {
     "url": "https://svhealthinvestors.com",
     "hq": "London, UK",
     "blurb": "Specialist fund that creates and scales new dementia biotechs using its network of venture partners and scientists.",
-    "id": "sv-health-investors-dementia-discovery-fund"
+    "call": "Rolling"
   },
   {
+    "id": "the-column-group",
     "name": "The Column Group",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -773,9 +1216,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.thecolumngroup.com",
     "hq": "San Francisco, CA",
     "blurb": "Science-driven firm that forms and incubates platform biotechs around foundational discoveries with founding scientists.",
-    "id": "the-column-group"
+    "call": "Rolling"
   },
   {
+    "id": "third-rock-ventures",
     "name": "Third Rock Ventures",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -786,9 +1230,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.thirdrockventures.com",
     "hq": "Boston, MA",
     "blurb": "Founds roughly three biotechs a year from scratch, hands-on building and leading them with large launch financings.",
-    "id": "third-rock-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "versant-ventures",
     "name": "Versant Ventures",
     "type": "Venture Studio",
     "capital": "Equity",
@@ -799,9 +1244,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.versantventures.com",
     "hq": "San Francisco, CA",
     "blurb": "Runs in-house discovery engines (Inception, Ridgeline) that translate academic science into newly launched biotech companies.",
-    "id": "versant-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "vivo-capital",
     "name": "Vivo Capital",
     "type": "Venture Studio",
     "capital": "Mixed",
@@ -812,9 +1258,10 @@ window.CAPITAL_MAP = {
     "url": "https://vivocapital.com",
     "hq": "Palo Alto, CA",
     "blurb": "Multi-strategy healthcare firm that helps entrepreneurs turn early ideas into companies across venture, growth and public stages.",
-    "id": "vivo-capital"
+    "call": "Rolling"
   },
   {
+    "id": "a-star",
     "name": "A*STAR",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -825,9 +1272,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.a-star.edu.sg",
     "hq": "Singapore (national research agency)",
     "blurb": "A*STAR funds and translates public biomedical and deep-tech research, backing spin-offs and researcher-founders at the earliest stages.",
-    "id": "a-star"
+    "call": "Recurring"
   },
   {
+    "id": "amed",
     "name": "AMED",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -838,9 +1286,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.amed.go.jp/en/",
     "hq": "Japan (medical research agency)",
     "blurb": "AMED, Japan's NIH-equivalent, offers matching grants up to twice VC investment for early biopharma startups from preclinical stages.",
-    "id": "amed"
+    "call": "Recurring"
   },
   {
+    "id": "aria",
     "name": "ARIA",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -851,9 +1300,10 @@ window.CAPITAL_MAP = {
     "url": "https://aria.org.uk",
     "hq": "UK (DSIT)",
     "blurb": "ARIA funds speculative, high-risk scientific breakthroughs, including synthetic biology and neurotech, too edgy for mainstream research councils.",
-    "id": "aria"
+    "call": "Recurring"
   },
   {
+    "id": "arpa-h",
     "name": "ARPA-H",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -864,9 +1314,10 @@ window.CAPITAL_MAP = {
     "url": "https://arpa-h.gov",
     "hq": "US (HHS)",
     "blurb": "ARPA-H funds high-risk breakthrough health projects, with early Spark and Exploration tracks backing proof-of-concept ideas from founders and researchers.",
-    "id": "arpa-h"
+    "call": "Recurring"
   },
   {
+    "id": "barda-drive",
     "name": "BARDA DRIVe",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -877,9 +1328,24 @@ window.CAPITAL_MAP = {
     "url": "https://drive.hhs.gov",
     "hq": "US (BARDA, HHS)",
     "blurb": "BARDA DRIVe's EZ-BAA gives early-stage startups under $750K non-dilutive for transformative health-security and pandemic-preparedness technologies.",
-    "id": "barda-drive"
+    "call": "Recurring"
   },
   {
+    "id": "birac-biotechnology-ignition-grant-big",
+    "name": "BIRAC Biotechnology Ignition Grant (BIG)",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "₹50 lakh (~$60K)",
+    "geo": "India",
+    "focus": "Biotech ideation to proof-of-concept",
+    "url": "https://birac.nic.in/big.php",
+    "hq": "New Delhi, India",
+    "blurb": "India's flagship ignition grant funds biotech ideas from academia and startups through proof-of-concept over 18 months.",
+    "call": "Recurring"
+  },
+  {
+    "id": "bpifrance-i-lab-i-phd",
     "name": "Bpifrance i-Lab / i-PhD",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -890,9 +1356,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.bpifrance.fr",
     "hq": "France (Bpifrance)",
     "blurb": "Bpifrance's i-PhD and i-Lab competitions grant researcher-founders up to €30K then €600K to launch deep-tech startups.",
-    "id": "bpifrance-i-lab-i-phd"
+    "call": "Recurring"
   },
   {
+    "id": "carb-x",
     "name": "CARB-X",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -903,9 +1370,10 @@ window.CAPITAL_MAP = {
     "url": "https://carb-x.org",
     "hq": "US (Boston University; public-private partnership)",
     "blurb": "CARB-X, a public-private partnership, funds early preclinical antibacterial R&D worldwide to combat drug-resistant bacteria and diagnostics.",
-    "id": "carb-x"
+    "call": "Recurring"
   },
   {
+    "id": "cihr",
     "name": "CIHR",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -916,9 +1384,38 @@ window.CAPITAL_MAP = {
     "url": "https://cihr-irsc.gc.ca",
     "hq": "Canada (federal health research agency)",
     "blurb": "CIHR funds foundational health research grants, supporting researchers-turned-founders at the earliest discovery stage before company formation.",
-    "id": "cihr"
+    "call": "Recurring"
   },
   {
+    "id": "corfo-semilla-inicia",
+    "name": "CORFO Semilla Inicia",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Up to ~CLP $15M (~$16K)",
+    "geo": "Chile",
+    "focus": "Early innovative ventures",
+    "url": "https://www.corfo.cl/",
+    "hq": "Santiago, Chile",
+    "blurb": "Chile's government co-financing grant validates idea- and prototype-stage innovative ventures before they generate regular sales.",
+    "call": "Recurring"
+  },
+  {
+    "id": "cqdm",
+    "name": "CQDM",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Seed",
+    "amount": "Varies (~C$0.5M–1.5M)",
+    "geo": "Canada (Quebec)",
+    "focus": "Biopharma translational R&D",
+    "url": "https://cqdm.org/en/",
+    "hq": "Montreal, Canada",
+    "blurb": "Public-private consortium funds early biopharma R&D by Canadian SMEs and academics via recurring collaborative calls.",
+    "call": "Recurring"
+  },
+  {
+    "id": "darpa-biological-technologies-office-bto",
     "name": "DARPA Biological Technologies Office (BTO)",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -929,9 +1426,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.darpa.mil/about/offices/bto",
     "hq": "US (DoD)",
     "blurb": "DARPA BTO funds high-risk, high-reward research in synthetic biology, biosecurity and neurotech, partnering with founders and universities.",
-    "id": "darpa-biological-technologies-office-bto"
+    "call": "Recurring"
   },
   {
+    "id": "eic-accelerator",
     "name": "EIC Accelerator",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -942,9 +1440,10 @@ window.CAPITAL_MAP = {
     "url": "https://eic.ec.europa.eu",
     "hq": "EU (European Commission)",
     "blurb": "EIC Accelerator gives startups a non-dilutive grant up to €2.5M, optionally blended with equity, for breakthrough innovations.",
-    "id": "eic-accelerator"
+    "call": "Recurring"
   },
   {
+    "id": "eic-pathfinder",
     "name": "EIC Pathfinder",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -955,9 +1454,24 @@ window.CAPITAL_MAP = {
     "url": "https://eic.ec.europa.eu",
     "hq": "EU (European Commission)",
     "blurb": "EIC Pathfinder funds visionary early-stage research (TRL 1-3) proving feasibility of disruptive deep-tech and biotech breakthroughs.",
-    "id": "eic-pathfinder"
+    "call": "Recurring"
   },
   {
+    "id": "enterprise-ireland-pre-seed-start-fund",
+    "name": "Enterprise Ireland Pre-Seed Start Fund",
+    "type": "Government Grant",
+    "capital": "Convertible/SAFE",
+    "stage": "Pre-seed",
+    "amount": "Up to €100K",
+    "geo": "Ireland",
+    "focus": "Innovative early-stage startups",
+    "url": "https://www.enterprise-ireland.com/en/supports/start-ups",
+    "hq": "Dublin, Ireland",
+    "blurb": "Ireland's agency backs early startups, including biotech, with convertible loans plus advisers and mentoring beyond the idea phase.",
+    "call": "Rolling"
+  },
+  {
+    "id": "enterprise-singapore-startup-sg-founder",
     "name": "Enterprise Singapore (Startup SG Founder)",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -968,9 +1482,38 @@ window.CAPITAL_MAP = {
     "url": "https://www.enterprisesg.gov.sg",
     "hq": "Singapore (Enterprise Singapore)",
     "blurb": "Startup SG Founder gives first-time founders up to S$50K matched capital plus mentorship to launch a new Singapore company.",
-    "id": "enterprise-singapore-startup-sg-founder"
+    "call": "Recurring"
   },
   {
+    "id": "fapesp-pipe",
+    "name": "FAPESP PIPE",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "R$200K (~$37K)",
+    "geo": "Brazil (São Paulo)",
+    "focus": "Small-business innovative research",
+    "url": "https://fapesp.br/pipe/",
+    "hq": "São Paulo, Brazil",
+    "blurb": "São Paulo's small-business research program funds Phase 1 technical and commercial viability of early innovations, with quarterly calls.",
+    "call": "Recurring"
+  },
+  {
+    "id": "genome-canada-gapp",
+    "name": "Genome Canada (GAPP)",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Seed",
+    "amount": "C$300K–$2M",
+    "geo": "Canada",
+    "focus": "Genomics commercialization",
+    "url": "https://genomecanada.ca/funding/genomic-applications-partnership-program/",
+    "hq": "Ottawa, Canada",
+    "blurb": "Non-dilutive co-funding helps early genomics-enabled companies translate biotech innovations into market-ready products with academic partners.",
+    "call": "Recurring"
+  },
+  {
+    "id": "go-bio-initial",
     "name": "GO-Bio (initial)",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -981,9 +1524,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.go-bio.de",
     "hq": "Germany (BMBF/BMFTR)",
     "blurb": "GO-Bio initial gives life-science teams ~€100K to develop and test commercialization ideas before founding a company.",
-    "id": "go-bio-initial"
+    "call": "Recurring"
   },
   {
+    "id": "innovate-uk-biomedical-catalyst",
     "name": "Innovate UK Biomedical Catalyst",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -994,9 +1538,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.ukri.org/what-we-do/browse-our-areas-of-investment-and-support/biomedical-catalyst/",
     "hq": "UK (Innovate UK / UKRI)",
     "blurb": "Innovate UK's Biomedical Catalyst offers up to £500K for early-stage translational R&D by UK life-science startups.",
-    "id": "innovate-uk-biomedical-catalyst"
+    "call": "Recurring"
   },
   {
+    "id": "israel-innovation-authority",
     "name": "Israel Innovation Authority",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -1007,9 +1552,24 @@ window.CAPITAL_MAP = {
     "url": "https://innovationisrael.org.il/en",
     "hq": "Israel (government agency)",
     "blurb": "Israel Innovation Authority's Startup Fund and incubator grants back the earliest deep-tech and biotech companies from research to seed.",
-    "id": "israel-innovation-authority"
+    "call": "Recurring"
   },
   {
+    "id": "korea-drug-development-fund-kddf",
+    "name": "Korea Drug Development Fund (KDDF)",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Varies",
+    "geo": "South Korea",
+    "focus": "Early-stage drug discovery",
+    "url": "https://www.kddf.org/en",
+    "hq": "Seoul, South Korea",
+    "blurb": "Korea's national drug fund prioritizes early-stage discovery pipelines, funding roughly 130 new projects annually through recurring open calls.",
+    "call": "Recurring"
+  },
+  {
+    "id": "mrff-medical-research-future-fund",
     "name": "MRFF (Medical Research Future Fund)",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -1020,9 +1580,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.health.gov.au/our-work/mrff",
     "hq": "Australia (Dept of Health)",
     "blurb": "Australia's MRFF commercialisation and BioMedTech Incubator initiatives fund early-stage health research to de-risk it toward private investment.",
-    "id": "mrff-medical-research-future-fund"
+    "call": "Recurring"
   },
   {
+    "id": "nih-radx",
     "name": "NIH RADx",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -1033,9 +1594,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.nih.gov/research-training/medical-research-initiatives/radx",
     "hq": "US (NIH/NIBIB)",
     "blurb": "NIH RADx fast-tracks diagnostic technologies through stage-gated non-dilutive support, from early deep-dive validation to commercialization.",
-    "id": "nih-radx"
+    "call": "Recurring"
   },
   {
+    "id": "nih-sbir-sttr",
     "name": "NIH SBIR/STTR",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -1046,9 +1608,10 @@ window.CAPITAL_MAP = {
     "url": "https://seed.nih.gov",
     "hq": "US (NIH, HHS)",
     "blurb": "NIH SBIR/STTR Phase I gives biomedical startups roughly $300K non-dilutive to prove technical feasibility of a health innovation.",
-    "id": "nih-sbir-sttr"
+    "call": "Recurring"
   },
   {
+    "id": "nrc-irap",
     "name": "NRC IRAP",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -1059,9 +1622,10 @@ window.CAPITAL_MAP = {
     "url": "https://nrc.canada.ca/en/support-technology-innovation",
     "hq": "Canada (National Research Council)",
     "blurb": "NRC IRAP funds Canadian SMEs' innovation R&D, typically $75K–$200K for first projects, covering most salary costs.",
-    "id": "nrc-irap"
+    "call": "Recurring"
   },
   {
+    "id": "nsf-sbir-sttr-america-s-seed-fund",
     "name": "NSF SBIR/STTR (America's Seed Fund)",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -1072,9 +1636,24 @@ window.CAPITAL_MAP = {
     "url": "https://seedfund.nsf.gov",
     "hq": "US (NSF)",
     "blurb": "America's Seed Fund Phase I awards up to $305K non-dilutive to early deep-tech and biotech startups for feasibility R&D.",
-    "id": "nsf-sbir-sttr-america-s-seed-fund"
+    "call": "Recurring"
   },
   {
+    "id": "vinnova-innovative-startups",
+    "name": "Vinnova Innovative Startups",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Varies (~SEK 300K–900K)",
+    "geo": "Sweden",
+    "focus": "Knowledge-based innovative startups",
+    "url": "https://www.vinnova.se/en/",
+    "hq": "Stockholm, Sweden",
+    "blurb": "Sweden's innovation agency gives non-dilutive grants to young research-based startups verifying and commercializing knowledge-intensive ideas.",
+    "call": "Recurring"
+  },
+  {
+    "id": "wellcome-trust",
     "name": "Wellcome Trust",
     "type": "Government Grant",
     "capital": "Non-dilutive",
@@ -1085,9 +1664,10 @@ window.CAPITAL_MAP = {
     "url": "https://wellcome.org/research-funding",
     "hq": "UK (charitable foundation)",
     "blurb": "Wellcome's Early-Career and Discovery Awards fund researchers' salaries plus research costs, backing the earliest health-science ideas pre-company.",
-    "id": "wellcome-trust"
+    "call": "Recurring"
   },
   {
+    "id": "additional-ventures",
     "name": "Additional Ventures",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1098,9 +1678,52 @@ window.CAPITAL_MAP = {
     "url": "https://www.additionalventures.org",
     "hq": "San Mateo, CA",
     "blurb": "Funds foundational and career-development research into single ventricle heart disease through multi-year investigator and early-career grants.",
-    "id": "additional-ventures"
+    "call": "Recurring"
   },
   {
+    "id": "alzheimer-s-association-part-the-cloud",
+    "name": "Alzheimer's Association Part the Cloud",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Up to $1M",
+    "geo": "Global",
+    "focus": "Alzheimer's & dementia",
+    "url": "https://www.alz.org/research/for_researchers/grants/types-of-grants/part-the-cloud-translational-research",
+    "hq": "Chicago, IL",
+    "blurb": "Recurring translational RFAs fund early-stage Alzheimer's drug development for academic investigators and small companies.",
+    "call": "Recurring"
+  },
+  {
+    "id": "alzheimer-s-drug-discovery-foundation-addf",
+    "name": "Alzheimer's Drug Discovery Foundation (ADDF)",
+    "type": "Philanthropic Grant",
+    "capital": "Mixed",
+    "stage": "Pre-seed",
+    "amount": "$100K–$3M",
+    "geo": "Global",
+    "focus": "Alzheimer's & dementia",
+    "url": "https://www.alzdiscovery.org/research-and-grants/funding-opportunities",
+    "hq": "New York, NY",
+    "blurb": "Recurring RFPs fund earliest drug and biomarker discovery for Alzheimer's, with investment upside via its venture-philanthropy model.",
+    "call": "Recurring"
+  },
+  {
+    "id": "american-heart-association-research-ventures",
+    "name": "American Heart Association (Research & Ventures)",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Up to ~$200K",
+    "geo": "US",
+    "focus": "Cardiovascular & brain",
+    "url": "https://professional.heart.org/en/research-programs/aha-funding-opportunities",
+    "hq": "Dallas, TX",
+    "blurb": "Recurring Innovative Project and early-investigator awards seed the earliest cardiovascular and cerebrovascular research and innovation.",
+    "call": "Recurring"
+  },
+  {
+    "id": "astera-institute",
     "name": "Astera Institute",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1111,9 +1734,10 @@ window.CAPITAL_MAP = {
     "url": "https://astera.org",
     "hq": "Berkeley, CA",
     "blurb": "Funds high-agency scientist-founders via fully-funded residencies and grants to build open, nonproprietary science public goods from scratch.",
-    "id": "astera-institute"
+    "call": "Recurring"
   },
   {
+    "id": "cancer-research-institute",
     "name": "Cancer Research Institute",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1124,9 +1748,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.cancerresearch.org",
     "hq": "New York, NY",
     "blurb": "Funds promising early-career immunologists via postdoctoral fellowships and grants advancing cancer immunotherapy science.",
-    "id": "cancer-research-institute"
+    "call": "Recurring"
   },
   {
+    "id": "cancer-research-uk-cruk-early-detection-innovation-awards",
+    "name": "Cancer Research UK (CRUK) Early Detection & Innovation Awards",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "Up to £100K (primer/seed)",
+    "geo": "United Kingdom",
+    "focus": "Cancer research and early detection",
+    "url": "https://www.cancerresearchuk.org/funding-for-researchers",
+    "hq": "London, United Kingdom",
+    "blurb": "Primer, seed and pump-priming awards let researchers develop pioneering early cancer-detection and discovery ideas from scratch.",
+    "call": "Recurring"
+  },
+  {
+    "id": "chan-zuckerberg-initiative-biohub",
     "name": "Chan Zuckerberg Initiative / Biohub",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1137,9 +1776,24 @@ window.CAPITAL_MAP = {
     "url": "https://chanzuckerberg.com/science",
     "hq": "Redwood City, CA",
     "blurb": "Funds early-career investigators, tools, and patient-led rare disease groups through science RFAs and the Rare As One network.",
-    "id": "chan-zuckerberg-initiative-biohub"
+    "call": "Recurring"
   },
   {
+    "id": "chordoma-foundation",
+    "name": "Chordoma Foundation",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$50K–$200K",
+    "geo": "Global",
+    "focus": "Chordoma",
+    "url": "https://www.chordomafoundation.org/researchers/",
+    "hq": "Durham, NC",
+    "blurb": "Peer-reviewed Seed and CLIP grants fund earliest investigator-initiated chordoma research and preliminary-data generation.",
+    "call": "Recurring"
+  },
+  {
+    "id": "convergent-research",
     "name": "Convergent Research",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1150,9 +1804,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.convergentresearch.org",
     "hq": "Cambridge, MA",
     "blurb": "Launches and funds Focused Research Organizations, giving scientist-founders large non-dilutive grants to build field-enabling tools over 3-7 years.",
-    "id": "convergent-research"
+    "call": "Recurring"
   },
   {
+    "id": "cures-within-reach",
+    "name": "Cures Within Reach",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "$70K–$125K",
+    "geo": "Global",
+    "focus": "Drug repurposing",
+    "url": "https://www.cureswithinreach.org/programs/funding-opportunities-rfps/",
+    "hq": "Chicago, IL",
+    "blurb": "Recurring RFPs fund earliest proof-of-concept repurposing trials across diseases via rolling LOI submissions.",
+    "call": "Recurring"
+  },
+  {
+    "id": "emergent-ventures-mercatus",
     "name": "Emergent Ventures (Mercatus)",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1163,9 +1832,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.mercatus.org/emergent-ventures",
     "hq": "Arlington, VA",
     "blurb": "Low-overhead grants and fellowships backing entrepreneurs and scientists with scalable zero-to-one ideas, including early biotech founders.",
-    "id": "emergent-ventures-mercatus"
+    "call": "Recurring"
   },
   {
+    "id": "fare-food-allergy-research-education",
+    "name": "FARE (Food Allergy Research & Education)",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "Varies",
+    "geo": "US",
+    "focus": "Food allergy",
+    "url": "https://www.foodallergy.org/research-innovation",
+    "hq": "McLean, VA",
+    "blurb": "Recurring RFPs and Mind Meld team grants fund earliest translational and convergence-science food-allergy research.",
+    "call": "Recurring"
+  },
+  {
+    "id": "fast-grants",
     "name": "Fast Grants",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1176,9 +1860,10 @@ window.CAPITAL_MAP = {
     "url": "https://fastgrants.org",
     "hq": "Arlington, VA",
     "blurb": "Historic Emergent Ventures program that funded COVID-19 science within days; now dormant but a landmark fast-science model.",
-    "id": "fast-grants"
+    "call": "Closed"
   },
   {
+    "id": "foresight-institute",
     "name": "Foresight Institute",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1189,9 +1874,10 @@ window.CAPITAL_MAP = {
     "url": "https://foresight.org",
     "hq": "San Francisco, CA",
     "blurb": "Fast small grants and fellowships helping frontier longevity biotech and molecular nanotech ideas get off the ground quickly.",
-    "id": "foresight-institute"
+    "call": "Recurring"
   },
   {
+    "id": "gates-foundation-grand-challenges",
     "name": "Gates Foundation Grand Challenges",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1202,9 +1888,24 @@ window.CAPITAL_MAP = {
     "url": "https://gcgh.grandchallenges.org",
     "hq": "Seattle, WA",
     "blurb": "Grand Challenges grants seed early-stage, unconventional global-health innovations, with follow-on funding for projects that show promise.",
-    "id": "gates-foundation-grand-challenges"
+    "call": "Recurring"
   },
   {
+    "id": "harrington-discovery-institute",
+    "name": "Harrington Discovery Institute",
+    "type": "Philanthropic Grant",
+    "capital": "Mixed",
+    "stage": "Pre-seed",
+    "amount": "$100K–$2M",
+    "geo": "US/Canada",
+    "focus": "Rare & common disease",
+    "url": "https://www.harringtondiscovery.org/funding/harrington-scholar-innovator",
+    "hq": "Cleveland, OH",
+    "blurb": "Annual Scholar-Innovator Award funds earliest physician-scientist drug discovery, with acceleration and investment funds available.",
+    "call": "Recurring"
+  },
+  {
+    "id": "hevolution-foundation",
     "name": "Hevolution Foundation",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1215,9 +1916,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.hevolution.com",
     "hq": "Riyadh, Saudi Arabia",
     "blurb": "Backs geroscience research and new-investigator awards worldwide, funding pre-clinical aging biology and translational healthspan projects.",
-    "id": "hevolution-foundation"
+    "call": "Recurring"
   },
   {
+    "id": "hhmi-hanna-gray-fellows",
     "name": "HHMI Hanna Gray Fellows",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1228,9 +1930,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.hhmi.org",
     "hq": "Chevy Chase, MD",
     "blurb": "Backs exceptional early-career biomedical scientists (people, not projects) from postdoc through launching an independent lab.",
-    "id": "hhmi-hanna-gray-fellows"
+    "call": "Recurring"
   },
   {
+    "id": "homeworld-collective",
     "name": "Homeworld Collective",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1241,9 +1944,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.homeworld.bio",
     "hq": "US (remote)",
     "blurb": "Garden Grants fund ambitious early-stage climate biotech and protein-engineering projects with a yearlong cohort program for grantees.",
-    "id": "homeworld-collective"
+    "call": "Recurring"
   },
   {
+    "id": "leo-foundation-research-grants",
+    "name": "LEO Foundation Research Grants",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "DKK 2–4M (~$300K–570K)",
+    "geo": "Global",
+    "focus": "Dermatology and skin biology",
+    "url": "https://leo-foundation.org/en/grants-and-awards/research-grants/",
+    "hq": "Copenhagen, Denmark",
+    "blurb": "Three annual calls fund earliest-stage dermatology and skin-biology research by scientists at non-profit institutions worldwide.",
+    "call": "Recurring"
+  },
+  {
+    "id": "lev-foundation",
     "name": "LEV Foundation",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1254,9 +1972,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.levf.org",
     "hq": "Mountain View, CA",
     "blurb": "Aubrey de Grey's nonprofit funding combination rejuvenation studies like Robust Mouse Rejuvenation to accelerate longevity therapeutics.",
-    "id": "lev-foundation"
+    "call": "Recurring"
   },
   {
+    "id": "lifearc-translational-funding",
+    "name": "LifeArc Translational Funding",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Varies (£250K+)",
+    "geo": "United Kingdom",
+    "focus": "Translational biomedical research",
+    "url": "https://www.lifearc.org/funding/",
+    "hq": "Stevenage, United Kingdom",
+    "blurb": "UK medical charity runs open calls funding early translational projects moving academic discoveries toward proof-of-concept and therapies.",
+    "call": "Recurring"
+  },
+  {
+    "id": "longevity-impetus-grants-norn-group",
     "name": "Longevity Impetus Grants (Norn Group)",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1267,9 +2000,38 @@ window.CAPITAL_MAP = {
     "url": "https://norn.group/impetus-grants",
     "hq": "US (remote)",
     "blurb": "Fast grants letting scientists start bold aging-biology research quickly, with funding decisions made in roughly three weeks.",
-    "id": "longevity-impetus-grants-norn-group"
+    "call": "Recurring"
   },
   {
+    "id": "melanoma-research-alliance",
+    "name": "Melanoma Research Alliance",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$50K–$250K",
+    "geo": "Global",
+    "focus": "Melanoma",
+    "url": "https://www.curemelanoma.org/research/request-for-proposals",
+    "hq": "Washington, DC",
+    "blurb": "Annual RFP funds Young Investigator and Pilot awards seeding the earliest melanoma research from early-career scientists.",
+    "call": "Recurring"
+  },
+  {
+    "id": "michael-j-fox-foundation",
+    "name": "Michael J. Fox Foundation",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Varies (up to ~$1M)",
+    "geo": "Global",
+    "focus": "Parkinson's",
+    "url": "https://www.michaeljfox.org/funding-opportunities",
+    "hq": "New York, NY",
+    "blurb": "Rolling Therapeutics Pipeline grants fund the earliest therapeutic and target-validation work for Parkinson's, from academics to biotech founders.",
+    "call": "Rolling"
+  },
+  {
+    "id": "milken-institute-fastercures",
     "name": "Milken Institute FasterCures",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1280,9 +2042,52 @@ window.CAPITAL_MAP = {
     "url": "https://milkeninstitute.org/health/fastercures",
     "hq": "Santa Monica, CA",
     "blurb": "Advances venture philanthropy models and networks that deploy philanthropic capital into early-stage, patient-driven therapeutic research.",
-    "id": "milken-institute-fastercures"
+    "call": "Recurring"
   },
   {
+    "id": "multiple-myeloma-research-foundation-mmrf",
+    "name": "Multiple Myeloma Research Foundation (MMRF)",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$75K–$400K",
+    "geo": "US",
+    "focus": "Multiple myeloma",
+    "url": "https://themmrf.org/for-researchers/grants-funding-opportunities/",
+    "hq": "Norwalk, CT",
+    "blurb": "Annual Fellowship and Scholars RFAs fund earliest-stage myeloma research by fellows and early-career investigators.",
+    "call": "Recurring"
+  },
+  {
+    "id": "national-ms-society-fast-forward",
+    "name": "National MS Society Fast Forward",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Varies",
+    "geo": "Global",
+    "focus": "Multiple sclerosis",
+    "url": "https://www.nationalmssociety.org/for-professionals/for-researchers/research-funding-opportunities/commercial",
+    "hq": "New York, NY",
+    "blurb": "Commercial R&D program funds early de-risking of MS therapeutics for startups and academic spinouts worldwide.",
+    "call": "Recurring"
+  },
+  {
+    "id": "novo-nordisk-foundation-pioneer-innovator-grant",
+    "name": "Novo Nordisk Foundation Pioneer Innovator Grant",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Up to DKK 1.2M (~$175K)",
+    "geo": "Denmark",
+    "focus": "Commercializing biomedical research",
+    "url": "https://novonordiskfonden.dk/en/grant/pioneer-innovator-grant/",
+    "hq": "Hellerup, Denmark",
+    "blurb": "Twice-yearly grants help researchers commercialize early application-oriented biomedicine and biotechnology ideas at the pre-seed stage.",
+    "call": "Recurring"
+  },
+  {
+    "id": "open-philanthropy",
     "name": "Open Philanthropy",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1293,9 +2098,38 @@ window.CAPITAL_MAP = {
     "url": "https://www.openphilanthropy.org",
     "hq": "San Francisco, CA",
     "blurb": "Funds scientific research, biosecurity, and pandemic-preparedness projects, including early-career individuals and high-risk infectious-disease tools.",
-    "id": "open-philanthropy"
+    "call": "Recurring"
   },
   {
+    "id": "progeria-research-foundation",
+    "name": "Progeria Research Foundation",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "Up to $150K",
+    "geo": "Global",
+    "focus": "Progeria",
+    "url": "https://www.progeriaresearch.org/research-grants/",
+    "hq": "Peabody, MA",
+    "blurb": "Innovator Awards fund earliest new lines of progeria investigation, generating preliminary data for larger follow-on funding.",
+    "call": "Recurring"
+  },
+  {
+    "id": "prostate-cancer-foundation",
+    "name": "Prostate Cancer Foundation",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$225K (Young Investigator)",
+    "geo": "Global",
+    "focus": "Prostate cancer",
+    "url": "https://www.pcf.org/our-work/open-rfas-rfps/",
+    "hq": "Santa Monica, CA",
+    "blurb": "Recurring Young Investigator Awards give early-career scientists three-year seed funding for novel prostate cancer ideas.",
+    "call": "Recurring"
+  },
+  {
+    "id": "renaissance-philanthropy",
     "name": "Renaissance Philanthropy",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1306,9 +2140,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.renaissancephilanthropy.org",
     "hq": "Washington, DC",
     "blurb": "Designs thesis-driven philanthropic funds backing ambitious science too big for academia yet too risky for VC, including health innovation.",
-    "id": "renaissance-philanthropy"
+    "call": "Recurring"
   },
   {
+    "id": "schmidt-sciences",
     "name": "Schmidt Sciences",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1319,9 +2154,38 @@ window.CAPITAL_MAP = {
     "url": "https://www.schmidtsciences.org",
     "hq": "New York, NY",
     "blurb": "Funds early-career scientists and high-risk bets across biosciences and AI-for-science through fellowships and interdisciplinary programs.",
-    "id": "schmidt-sciences"
+    "call": "Recurring"
   },
   {
+    "id": "science-for-africa-foundation-grand-challenges-africa",
+    "name": "Science for Africa Foundation – Grand Challenges Africa",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "Up to $200K (seed)",
+    "geo": "Africa",
+    "focus": "Africa-led health innovation",
+    "url": "https://scienceforafrica.foundation/grand-challenges-africa",
+    "hq": "Nairobi, Kenya",
+    "blurb": "Awards seed and proof-of-concept grants to earliest-stage, Africa-led health and development innovations across recurring challenge calls.",
+    "call": "Recurring"
+  },
+  {
+    "id": "sfari-simons-foundation-autism-research-initiative",
+    "name": "SFARI (Simons Foundation Autism Research Initiative)",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "Varies (up to ~$300K)",
+    "geo": "Global",
+    "focus": "Autism",
+    "url": "https://www.sfari.org/funding-opportunities/",
+    "hq": "New York, NY",
+    "blurb": "New Ideas program takes rolling LOIs funding earliest exploratory, hypothesis-testing autism research from any investigator.",
+    "call": "Rolling"
+  },
+  {
+    "id": "survival-and-flourishing-fund",
     "name": "Survival and Flourishing Fund",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1332,9 +2196,66 @@ window.CAPITAL_MAP = {
     "url": "https://survivalandflourishing.fund",
     "hq": "US (remote)",
     "blurb": "Funds projects improving long-term human survival, including biosecurity and pandemic-resilience work, via its S-process and Lightspeed Grants.",
-    "id": "survival-and-flourishing-fund"
+    "call": "Recurring"
   },
   {
+    "id": "susan-g-komen",
+    "name": "Susan G. Komen",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "Up to $450K",
+    "geo": "US",
+    "focus": "Breast cancer",
+    "url": "https://www.komen.org/breast-cancer-research/grants/opportunities/",
+    "hq": "Dallas, TX",
+    "blurb": "Career Catalyst Research grants fund earliest-stage breast cancer research by early-career faculty under mentored development.",
+    "call": "Recurring"
+  },
+  {
+    "id": "target-als",
+    "name": "Target ALS",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Varies",
+    "geo": "Global",
+    "focus": "ALS",
+    "url": "https://targetals.org/grants/",
+    "hq": "New York, NY",
+    "blurb": "Recurring consortia and fellowship calls fund earliest ALS/FTD target discovery across academia and industry.",
+    "call": "Recurring"
+  },
+  {
+    "id": "the-als-association",
+    "name": "The ALS Association",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$50K (Seed Grants)",
+    "geo": "Global",
+    "focus": "ALS",
+    "url": "https://www.als.org/research/research-we-fund/our-awards-and-programs/seed-grants",
+    "hq": "Arlington, VA",
+    "blurb": "Seed Grants fund earliest exploratory ALS research and preliminary data, open to investigators from any field.",
+    "call": "Recurring"
+  },
+  {
+    "id": "the-marfan-foundation",
+    "name": "The Marfan Foundation",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$75K–$100K",
+    "geo": "Global",
+    "focus": "Aortic & connective tissue disorders",
+    "url": "https://marfan.org/research/grants/",
+    "hq": "New York, NY",
+    "blurb": "Early Investigator and Career Development grants seed earliest research on Marfan and related genetic aortic conditions.",
+    "call": "Recurring"
+  },
+  {
+    "id": "wellcome-leap",
     "name": "Wellcome Leap",
     "type": "Philanthropic Grant",
     "capital": "Non-dilutive",
@@ -1345,9 +2266,10 @@ window.CAPITAL_MAP = {
     "url": "https://wellcomeleap.org",
     "hq": "Los Angeles, CA",
     "blurb": "Runs DARPA-style, milestone-driven programs funding high-risk teams and companies tackling unsolved human-health challenges at scale.",
-    "id": "wellcome-leap"
+    "call": "Recurring"
   },
   {
+    "id": "1517-fund-medici-project",
     "name": "1517 Fund Medici Project",
     "type": "Fellowship",
     "capital": "Non-dilutive",
@@ -1358,9 +2280,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.1517fund.com/medici",
     "hq": "San Francisco, CA",
     "blurb": "No-strings $1K micro-grants to students and dropouts building ambitious deep-tech and science prototypes at idea stage.",
-    "id": "1517-fund-medici-project"
+    "call": "Recurring"
   },
   {
+    "id": "activate-cyclotron-road",
     "name": "Activate (Cyclotron Road)",
     "type": "Fellowship",
     "capital": "Non-dilutive",
@@ -1371,9 +2294,38 @@ window.CAPITAL_MAP = {
     "url": "https://www.activate.org",
     "hq": "Berkeley, CA",
     "blurb": "Two-year fellowship giving scientist-founders a living stipend, R&D funds, and lab access to spin science into companies.",
-    "id": "activate-cyclotron-road"
+    "call": "Recurring"
   },
   {
+    "id": "boehringer-ingelheim-fonds-phd-fellowships",
+    "name": "Boehringer Ingelheim Fonds PhD Fellowships",
+    "type": "Fellowship",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "2–3.5yr PhD stipend",
+    "geo": "Europe (global applicants)",
+    "focus": "Basic biomedical research",
+    "url": "https://www.bifonds.de/fellowships-grants/phd-fellowships.html",
+    "hq": "Mainz, Germany",
+    "blurb": "Fellowships fund outstanding junior scientists pursuing ambitious basic biomedical PhD projects in leading laboratories, three deadlines yearly.",
+    "call": "Recurring"
+  },
+  {
+    "id": "embo-postdoctoral-fellowships",
+    "name": "EMBO Postdoctoral Fellowships",
+    "type": "Fellowship",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "1–2yr fellowship stipend",
+    "geo": "Europe / Global",
+    "focus": "Molecular life-sciences research",
+    "url": "https://www.embo.org/funding/fellowships-grants-and-awards/postdoctoral-fellowships/",
+    "hq": "Heidelberg, Germany",
+    "blurb": "Twice-yearly fellowships fund life-sciences postdocs pursuing high-level research through international lab mobility.",
+    "call": "Recurring"
+  },
+  {
+    "id": "entrepreneur-first",
     "name": "Entrepreneur First",
     "type": "Fellowship",
     "capital": "Mixed",
@@ -1384,9 +2336,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.joinef.com",
     "hq": "London, UK",
     "blurb": "Talent-investor pairing individuals pre-idea, paying an equity-free stipend then investing up to $250K via SAFE post-formation.",
-    "id": "entrepreneur-first"
+    "call": "Recurring"
   },
   {
+    "id": "hertz-foundation-fellowship",
     "name": "Hertz Foundation Fellowship",
     "type": "Fellowship",
     "capital": "Non-dilutive",
@@ -1397,9 +2350,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.hertzfoundation.org",
     "hq": "Livermore, CA",
     "blurb": "Prestigious PhD fellowship funding applied-science researchers, many of whom become deep-tech and biotech founders.",
-    "id": "hertz-foundation-fellowship"
+    "call": "Recurring"
   },
   {
+    "id": "human-frontier-science-program-hfsp-fellowships",
+    "name": "Human Frontier Science Program (HFSP) Fellowships",
+    "type": "Fellowship",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "3-yr fellowship stipend",
+    "geo": "Global",
+    "focus": "Frontier life-sciences research",
+    "url": "https://www.hfsp.org/funding",
+    "hq": "Strasbourg, France",
+    "blurb": "Postdoctoral fellowships support scientists starting bold, novel life-sciences projects abroad without requiring preliminary data, via annual calls.",
+    "call": "Recurring"
+  },
+  {
+    "id": "runway-startup-postdocs-cornell-tech",
     "name": "Runway Startup Postdocs (Cornell Tech)",
     "type": "Fellowship",
     "capital": "Convertible/SAFE",
@@ -1410,9 +2378,10 @@ window.CAPITAL_MAP = {
     "url": "https://tech.cornell.edu/programs/phd/startup-postdocs/",
     "hq": "New York, NY",
     "blurb": "Postdoc program funding recent PhDs to build startups; Jacobs Institute invests via SAFE for a small equity stake.",
-    "id": "runway-startup-postdocs-cornell-tech"
+    "call": "Recurring"
   },
   {
+    "id": "schmidt-science-fellows",
     "name": "Schmidt Science Fellows",
     "type": "Fellowship",
     "capital": "Non-dilutive",
@@ -1423,9 +2392,10 @@ window.CAPITAL_MAP = {
     "url": "https://schmidtsciencefellows.org",
     "hq": "New York / London",
     "blurb": "Postdoctoral fellowship paying a stipend for a disciplinary pivot, seeding future scientist-founders across the life sciences.",
-    "id": "schmidt-science-fellows"
+    "call": "Recurring"
   },
   {
+    "id": "thiel-fellowship",
     "name": "Thiel Fellowship",
     "type": "Fellowship",
     "capital": "Non-dilutive",
@@ -1436,9 +2406,10 @@ window.CAPITAL_MAP = {
     "url": "https://thielfellowship.org",
     "hq": "San Francisco, CA",
     "blurb": "No-strings grant paying young people under 23 to skip or leave school and build companies, including biotech.",
-    "id": "thiel-fellowship"
+    "call": "Recurring"
   },
   {
+    "id": "angellist-biotech-syndicates",
     "name": "AngelList (biotech syndicates)",
     "type": "Angel/Syndicate",
     "capital": "Equity",
@@ -1449,9 +2420,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.angellist.com",
     "hq": "San Francisco, CA",
     "blurb": "Platform hosting biotech-focused angel syndicates and rolling funds that pool capital into earliest-stage rounds.",
-    "id": "angellist-biotech-syndicates"
+    "call": "Rolling"
   },
   {
+    "id": "band-of-angels",
     "name": "Band of Angels",
     "type": "Angel/Syndicate",
     "capital": "Equity",
@@ -1462,9 +2434,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.bandangels.com",
     "hq": "Menlo Park, CA",
     "blurb": "Silicon Valley's oldest angel group, seed-funding startups including select biotech and cell/gene therapy ventures.",
-    "id": "band-of-angels"
+    "call": "Rolling"
   },
   {
+    "id": "bios-angels-alix-ventures",
     "name": "BIOS Angels (Alix Ventures)",
     "type": "Angel/Syndicate",
     "capital": "Equity",
@@ -1475,9 +2448,66 @@ window.CAPITAL_MAP = {
     "url": "https://www.alix.vc",
     "hq": "San Francisco, CA",
     "blurb": "Life-science angel syndicate run by Alix Ventures, writing early pre-seed and seed checks into TechBio.",
-    "id": "bios-angels-alix-ventures"
+    "call": "Rolling"
   },
   {
+    "id": "crohn-s-colitis-foundation-ibd-ventures",
+    "name": "Crohn's & Colitis Foundation IBD Ventures",
+    "type": "Angel/Syndicate",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "Up to $500K/yr",
+    "geo": "Global",
+    "focus": "Inflammatory bowel disease",
+    "url": "https://www.crohnscolitisfoundation.org/research/grants-fellowships/entrepreneurial-investing",
+    "hq": "New York, NY",
+    "blurb": "Entrepreneurial investing program funds early product development of IBD drugs, devices and diagnostics via rolling applications.",
+    "call": "Rolling"
+  },
+  {
+    "id": "cureduchenne-ventures",
+    "name": "CureDuchenne Ventures",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "~$1M (venture)",
+    "geo": "Global",
+    "focus": "Duchenne muscular dystrophy",
+    "url": "https://cureduchenne.org/ventures/",
+    "hq": "Newport Beach, CA",
+    "blurb": "Venture-philanthropy arm invests early equity to de-risk transformative Duchenne muscular dystrophy therapies and attract follow-on capital.",
+    "call": "Rolling"
+  },
+  {
+    "id": "cystic-fibrosis-foundation-mission-ventures",
+    "name": "Cystic Fibrosis Foundation (Mission Ventures)",
+    "type": "Angel/Syndicate",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (venture)",
+    "geo": "Global",
+    "focus": "Cystic fibrosis",
+    "url": "https://missionventures.cff.org/",
+    "hq": "Bethesda, MD",
+    "blurb": "Pioneering venture-philanthropy model funds early-stage spinouts and companies developing breakthrough cystic fibrosis therapies.",
+    "call": "Rolling"
+  },
+  {
+    "id": "foundation-fighting-blindness-rd-fund",
+    "name": "Foundation Fighting Blindness RD Fund",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Up to ~$5M (venture)",
+    "geo": "Global",
+    "focus": "Inherited retinal disease",
+    "url": "https://www.retinaldegenerationfund.org/",
+    "hq": "Columbia, MD",
+    "blurb": "Venture arm invests in early companies developing gene, cell and gene-agnostic therapies for retinal degenerations.",
+    "call": "Rolling"
+  },
+  {
+    "id": "golden-seeds",
     "name": "Golden Seeds",
     "type": "Angel/Syndicate",
     "capital": "Equity",
@@ -1488,9 +2518,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.goldenseeds.com",
     "hq": "New York, NY",
     "blurb": "Large angel network investing early in women-led companies across healthcare, biotech, and deep tech.",
-    "id": "golden-seeds"
+    "call": "Rolling"
   },
   {
+    "id": "keiretsu-forum",
     "name": "Keiretsu Forum",
     "type": "Angel/Syndicate",
     "capital": "Equity",
@@ -1501,9 +2532,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.keiretsuforum.com",
     "hq": "Bay Area, CA",
     "blurb": "World's largest angel network with active healthcare and life-science deal flow across dozens of global chapters.",
-    "id": "keiretsu-forum"
+    "call": "Rolling"
   },
   {
+    "id": "life-science-angels",
     "name": "Life Science Angels",
     "type": "Angel/Syndicate",
     "capital": "Equity",
@@ -1514,9 +2546,38 @@ window.CAPITAL_MAP = {
     "url": "https://www.lifescienceangels.com",
     "hq": "Palo Alto, CA",
     "blurb": "Bay Area angel group investing exclusively in early-stage biotech, medical device, diagnostics, and digital health startups.",
-    "id": "life-science-angels"
+    "call": "Rolling"
   },
   {
+    "id": "lls-therapy-acceleration-program",
+    "name": "LLS Therapy Acceleration Program",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Up to $10M (venture)",
+    "geo": "Global",
+    "focus": "Blood cancers",
+    "url": "https://bloodcancerunited.org/research/therapy-acceleration-program-tap",
+    "hq": "Rye Brook, NY",
+    "blurb": "Rolling venture-philanthropy program invests in early biotech startups advancing innovative blood-cancer therapeutics.",
+    "call": "Rolling"
+  },
+  {
+    "id": "mda-venture-philanthropy",
+    "name": "MDA Venture Philanthropy",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed",
+    "amount": "Varies (venture)",
+    "geo": "Global",
+    "focus": "Neuromuscular disease",
+    "url": "https://www.mda.org/science/mda-venture-philanthropy",
+    "hq": "New York, NY",
+    "blurb": "Invests in early-stage neuromuscular drug and device companies via rolling pitch-deck review to de-risk and attract capital.",
+    "call": "Rolling"
+  },
+  {
+    "id": "mid-atlantic-bio-angels",
     "name": "Mid-Atlantic Bio Angels",
     "type": "Angel/Syndicate",
     "capital": "Equity",
@@ -1527,9 +2588,10 @@ window.CAPITAL_MAP = {
     "url": "https://bioangels.net",
     "hq": "New York, NY",
     "blurb": "Life-science-only angel group backing emerging biotech and medtech, and running the 1st Pitch Life Science events.",
-    "id": "mid-atlantic-bio-angels"
+    "call": "Rolling"
   },
   {
+    "id": "portfolia",
     "name": "Portfolia",
     "type": "Angel/Syndicate",
     "capital": "Equity",
@@ -1540,9 +2602,24 @@ window.CAPITAL_MAP = {
     "url": "https://www.portfolia.co",
     "hq": "Palo Alto, CA",
     "blurb": "Member-led venture funds letting individual investors back early-stage women's-health and femtech biotech companies.",
-    "id": "portfolia"
+    "call": "Rolling"
   },
   {
+    "id": "t1d-fund-a-breakthrough-t1d-venture",
+    "name": "T1D Fund: A Breakthrough T1D Venture",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Up to ~$5M (venture)",
+    "geo": "Global",
+    "focus": "Type 1 diabetes",
+    "url": "https://t1dfund.org/venture-philanthropy/",
+    "hq": "Boston, MA",
+    "blurb": "Venture-philanthropy fund co-invests equity in earliest-stage companies pursuing disease-modifying therapies and cures for type 1 diabetes.",
+    "call": "Rolling"
+  },
+  {
+    "id": "broadignite",
     "name": "BroadIgnite",
     "type": "Prize/Competition",
     "capital": "Non-dilutive",
@@ -1553,9 +2630,10 @@ window.CAPITAL_MAP = {
     "url": "https://giving.broadinstitute.org/broadignite",
     "hq": "Cambridge, MA",
     "blurb": "Broad Institute award giving early-career scientists non-dilutive funding for high-risk research too early for traditional grants.",
-    "id": "broadignite"
+    "call": "Recurring"
   },
   {
+    "id": "hello-tomorrow-global-challenge",
     "name": "Hello Tomorrow Global Challenge",
     "type": "Prize/Competition",
     "capital": "Non-dilutive",
@@ -1566,9 +2644,10 @@ window.CAPITAL_MAP = {
     "url": "https://hello-tomorrow.org",
     "hq": "Paris, France",
     "blurb": "Global deep-tech competition awarding equity-free cash prizes and investor access to earliest-stage science startups.",
-    "id": "hello-tomorrow-global-challenge"
+    "call": "Recurring"
   },
   {
+    "id": "igem",
     "name": "iGEM",
     "type": "Prize/Competition",
     "capital": "Non-dilutive",
@@ -1579,9 +2658,10 @@ window.CAPITAL_MAP = {
     "url": "https://igem.org",
     "hq": "Paris, France",
     "blurb": "Global student synthetic-biology competition that serves as a springboard, launching many synbio startups at the idea stage.",
-    "id": "igem"
+    "call": "Recurring"
   },
   {
+    "id": "longitude-prize-on-amr",
     "name": "Longitude Prize on AMR",
     "type": "Prize/Competition",
     "capital": "Non-dilutive",
@@ -1592,9 +2672,10 @@ window.CAPITAL_MAP = {
     "url": "https://amr.longitudeprize.org",
     "hq": "London, UK",
     "blurb": "Major challenge prize rewarding rapid diagnostics that combat antimicrobial resistance, awarded to a UTI point-of-care test in 2024.",
-    "id": "longitude-prize-on-amr"
+    "call": "Recurring"
   },
   {
+    "id": "mit-100k-entrepreneurship-competition",
     "name": "MIT $100K Entrepreneurship Competition",
     "type": "Prize/Competition",
     "capital": "Non-dilutive",
@@ -1605,9 +2686,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.mit100k.org",
     "hq": "Cambridge, MA",
     "blurb": "Student competition awarding non-dilutive prizes and mentorship to earliest-stage ventures, frequently biotech and medical device.",
-    "id": "mit-100k-entrepreneurship-competition"
+    "call": "Recurring"
   },
   {
+    "id": "rice-business-plan-competition",
     "name": "Rice Business Plan Competition",
     "type": "Prize/Competition",
     "capital": "Non-dilutive",
@@ -1618,9 +2700,10 @@ window.CAPITAL_MAP = {
     "url": "https://rbpc.rice.edu",
     "hq": "Houston, TX",
     "blurb": "World's largest student startup competition, awarding cash, investment, and in-kind prizes, with strong life-science participation.",
-    "id": "rice-business-plan-competition"
+    "call": "Recurring"
   },
   {
+    "id": "village-capital-vilcap",
     "name": "Village Capital (VilCap)",
     "type": "Prize/Competition",
     "capital": "Non-dilutive",
@@ -1631,9 +2714,10 @@ window.CAPITAL_MAP = {
     "url": "https://vilcap.com",
     "hq": "Washington, DC",
     "blurb": "Cohort program where entrepreneurs peer-select which startups receive early grant/investment capital, including health-focused ventures.",
-    "id": "village-capital-vilcap"
+    "call": "Recurring"
   },
   {
+    "id": "xprize-healthspan",
     "name": "XPRIZE Healthspan",
     "type": "Prize/Competition",
     "capital": "Non-dilutive",
@@ -1644,9 +2728,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.xprize.org/prizes/healthspan",
     "hq": "Culver City, CA",
     "blurb": "Multi-year longevity competition awarding milestone cash and a large purse to teams restoring function in aging.",
-    "id": "xprize-healthspan"
+    "call": "Recurring"
   },
   {
+    "id": "experiment-com",
     "name": "Experiment.com",
     "type": "Crowdfunding",
     "capital": "Non-dilutive",
@@ -1657,9 +2742,10 @@ window.CAPITAL_MAP = {
     "url": "https://experiment.com",
     "hq": "US",
     "blurb": "All-or-nothing crowdfunding platform letting scientists raise non-dilutive funds directly for individual research projects.",
-    "id": "experiment-com"
+    "call": "Rolling"
   },
   {
+    "id": "netcapital",
     "name": "Netcapital",
     "type": "Crowdfunding",
     "capital": "Equity",
@@ -1670,9 +2756,10 @@ window.CAPITAL_MAP = {
     "url": "https://netcapital.com",
     "hq": "Boston, MA",
     "blurb": "Regulation CF equity crowdfunding platform enabling early-stage companies, including biotech, to raise from retail investors.",
-    "id": "netcapital"
+    "call": "Rolling"
   },
   {
+    "id": "republic",
     "name": "Republic",
     "type": "Crowdfunding",
     "capital": "Mixed",
@@ -1683,9 +2770,10 @@ window.CAPITAL_MAP = {
     "url": "https://republic.com",
     "hq": "New York, NY",
     "blurb": "Investment crowdfunding platform letting retail investors back early-stage biotech and deep-tech companies via SAFEs and equity.",
-    "id": "republic"
+    "call": "Rolling"
   },
   {
+    "id": "startengine",
     "name": "StartEngine",
     "type": "Crowdfunding",
     "capital": "Equity",
@@ -1696,9 +2784,10 @@ window.CAPITAL_MAP = {
     "url": "https://www.startengine.com",
     "hq": "Los Angeles, CA",
     "blurb": "Equity crowdfunding platform enabling startups, including healthcare and biotech, to raise from the public plus secondary trading.",
-    "id": "startengine"
+    "call": "Rolling"
   },
   {
+    "id": "wefunder",
     "name": "Wefunder",
     "type": "Crowdfunding",
     "capital": "Convertible/SAFE",
@@ -1709,7 +2798,7 @@ window.CAPITAL_MAP = {
     "url": "https://wefunder.com",
     "hq": "San Francisco, CA",
     "blurb": "Regulation CF platform enabling biotech startups to raise from the public via SAFEs with $100 minimum investments.",
-    "id": "wefunder"
+    "call": "Rolling"
   }
 ]
 };

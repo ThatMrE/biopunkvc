@@ -38,13 +38,20 @@ Every funding source in `assets/data.js` is one object:
   focus:  "All biotech / deep-tech bio",
   url:    "https://indiebio.co",
   hq:     "San Francisco / New York (SOSV)",
-  blurb:  "One sentence on what/whom they fund at the earliest stage."
+  blurb:  "One sentence on what/whom they fund at the earliest stage.",
+  call:   "Rolling"                     // Rolling | Cohorts | Recurring | Closed
 }
 ```
 
-**Categories (`type`):** Accelerator · Pre-seed/Seed VC · Venture Studio ·
+**Categories (`type`):** Accelerator · Pre-seed/Seed VC · Corporate VC · Venture Studio ·
 Government Grant · Philanthropic Grant · Fellowship · Angel/Syndicate ·
 Prize/Competition · Crowdfunding.
+
+**Application status (`call`):** `Rolling` (apply anytime) · `Cohorts` (batch intake) ·
+`Recurring` (cyclical call/RFA) · `Closed` (dormant). Surfaced on each card and
+filterable, so founders can find what's **open to apply to** right now. Because live
+deadlines shift, `call` uses these durable states rather than hard dates — always
+follow the source's link for the current window.
 
 The site reads this file directly; the counts, filters, and category chips all derive
 from the data — add an entry and everything updates automatically.

@@ -78,6 +78,7 @@
           </div>
           <select id="f-capital" class="select" aria-label="Filter by capital type"></select>
           <select id="f-stage" class="select" aria-label="Filter by stage"></select>
+          <select id="f-status" class="select" aria-label="Filter by application status"></select>
           <select id="f-sort" class="select" aria-label="Sort">
             <option value="type">Sort: by category</option>
             <option value="az">Sort: A–Z</option>
@@ -87,6 +88,7 @@
         <div class="filter-row" id="type-chips" role="group" aria-label="Filter by category"></div>
         <div class="controls-foot">
           <span class="result-count" id="result-count" aria-live="polite"></span>
+          <label class="open-toggle"><input type="checkbox" id="open-only" /> Accepting applications only</label>
           <button class="clear-btn" id="clear" type="button">Clear all filters</button>
         </div>
       </div>

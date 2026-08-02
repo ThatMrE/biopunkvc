@@ -13,6 +13,7 @@
   var TYPES = [
     "Accelerator",
     "Pre-seed/Seed VC",
+    "Corporate VC",
     "Venture Studio",
     "Government Grant",
     "Philanthropic Grant",
@@ -24,6 +25,8 @@
   var CAPITALS = ["Non-dilutive", "Equity", "Convertible/SAFE", "Mixed"];
   var STAGES = ["Idea", "Pre-seed", "Pre-seed–Seed", "Seed"];
   var STAGE_RANK = { "Idea": 0, "Pre-seed": 1, "Pre-seed–Seed": 2, "Seed": 3 };
+  // Application status: Rolling (anytime) / Cohorts (batch) / Recurring (cyclical) / Closed (dormant)
+  var CALLS = ["Rolling", "Cohorts", "Recurring", "Closed"];
 
   // ---- State ----
   var state = {
@@ -31,6 +34,8 @@
     types: new Set(),      // empty = all
     capital: "",           // "" = all
     stage: "",             // "" = all
+    call: "",              // "" = all
+    openOnly: false,       // hide "Closed"
     sort: "type"
   };
 
@@ -40,6 +45,13 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
+  function callLabel(c) {
+    if (c === "Rolling") return "Rolling · apply anytime";
+    if (c === "Cohorts") return "Cohorts · batch intake";
+    if (c === "Recurring") return "Recurring call";
+    if (c === "Closed") return "Not currently open";
+    return c;
+  }
   function $(sel, root) { return (root || document).querySelector(sel); }
   function el(tag, cls) { var e = document.createElement(tag); if (cls) e.className = cls; return e; }
 
@@ -47,6 +59,8 @@
     if (state.types.size && !state.types.has(item.type)) return false;
     if (state.capital && item.capital !== state.capital) return false;
     if (state.stage && item.stage !== state.stage) return false;
+    if (state.call && item.call !== state.call) return false;
+    if (state.openOnly && item.call === "Closed") return false;
     if (state.q) {
       var hay = (item.name + " " + item.focus + " " + item.geo + " " + item.hq + " " +
                  item.blurb + " " + item.type + " " + item.capital + " " + item.stage).toLowerCase();
@@ -92,6 +106,7 @@
         '<div class="badges">' +
           '<span class="badge badge-type" data-type="' + esc(item.type) + '">' + esc(item.type) + '</span>' +
           '<span class="badge badge-cap">' + esc(item.capital) + '</span>' +
+          (item.call ? '<span class="badge badge-call" data-call="' + esc(item.call) + '" title="Application status">' + esc(callLabel(item.call)) + '</span>' : '') +
         '</div>' +
         '<p class="card-blurb">' + esc(item.blurb) + '</p>' +
         '<div class="card-meta">' + meta.join("") + '</div>' +
@@ -130,23 +145,26 @@
     });
   }
 
-  function fillSelect(sel, values, allLabel) {
+  function fillSelect(sel, values, allLabel, labelFn) {
     if (!sel) return;
+    var field = sel.dataset.field;
     var html = '<option value="">' + allLabel + '</option>';
     values.forEach(function (v) {
-      // only include values that actually appear
-      if (SOURCES.some(function (s) { return sel.dataset.field === "capital" ? s.capital === v : s.stage === v; })) {
-        html += '<option value="' + esc(v) + '">' + esc(v) + '</option>';
+      // only include values that actually appear in the data
+      if (SOURCES.some(function (s) { return s[field] === v; })) {
+        html += '<option value="' + esc(v) + '">' + esc(labelFn ? labelFn(v) : v) + '</option>';
       }
     });
     sel.innerHTML = html;
   }
 
   function clearAll() {
-    state.q = ""; state.types.clear(); state.capital = ""; state.stage = "";
+    state.q = ""; state.types.clear(); state.capital = ""; state.stage = ""; state.call = ""; state.openOnly = false;
     var s = $("#search"); if (s) s.value = "";
     var cap = $("#f-capital"); if (cap) cap.value = "";
     var stg = $("#f-stage"); if (stg) stg.value = "";
+    var cal = $("#f-status"); if (cal) cal.value = "";
+    var oo = $("#open-only"); if (oo) oo.checked = false;
     document.querySelectorAll("#type-chips .chip").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
     render();
   }
@@ -223,11 +241,15 @@
     buildChips();
     var capSel = $("#f-capital"); if (capSel) { capSel.dataset.field = "capital"; fillSelect(capSel, CAPITALS, "All capital types"); }
     var stgSel = $("#f-stage"); if (stgSel) { stgSel.dataset.field = "stage"; fillSelect(stgSel, STAGES, "All stages"); }
+    var calSel = $("#f-status"); if (calSel) { calSel.dataset.field = "call"; fillSelect(calSel, CALLS, "Any application status", callLabel); }
 
     var s = $("#search");
     if (s) s.addEventListener("input", function () { state.q = s.value.trim(); render(); });
     if (capSel) capSel.addEventListener("change", function () { state.capital = capSel.value; render(); });
     if (stgSel) stgSel.addEventListener("change", function () { state.stage = stgSel.value; render(); });
+    if (calSel) calSel.addEventListener("change", function () { state.call = calSel.value; render(); });
+    var openOnly = $("#open-only");
+    if (openOnly) openOnly.addEventListener("change", function () { state.openOnly = openOnly.checked; render(); });
     var sortSel = $("#f-sort");
     if (sortSel) sortSel.addEventListener("change", function () { state.sort = sortSel.value; render(); });
     var clr = $("#clear"); if (clr) clr.addEventListener("click", clearAll);
