@@ -74,22 +74,34 @@
         <div class="search-row">
           <div class="search-box">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-            <input id="search" type="search" placeholder="Search by name, focus, geography… (e.g. “longevity”, “SBIR”, “Boston”)" aria-label="Search funding sources" />
+            <input id="search" type="search" placeholder="Search 276 sources — name, focus, geography…" aria-label="Search funding sources" />
           </div>
+          <select id="f-type" class="select" aria-label="Filter by category"></select>
+          <select id="f-sector" class="select" aria-label="Filter by sector"></select>
+          <button id="more-toggle" class="more-btn" type="button" aria-expanded="false" aria-controls="more-panel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 5h18M6 12h12M10 19h4"/></svg>
+            More filters <span id="more-count" class="more-count hidden"></span>
+          </button>
+        </div>
+
+        <div class="more-panel" id="more-panel" hidden>
           <select id="f-capital" class="select" aria-label="Filter by capital type"></select>
           <select id="f-stage" class="select" aria-label="Filter by stage"></select>
           <select id="f-status" class="select" aria-label="Filter by application status"></select>
+          <label class="open-toggle"><input type="checkbox" id="open-only" /> Accepting applications only</label>
           <select id="f-sort" class="select" aria-label="Sort">
             <option value="type">Sort: by category</option>
+            <option value="sector">Sort: by sector</option>
             <option value="az">Sort: A–Z</option>
             <option value="stage">Sort: by stage</option>
           </select>
         </div>
-        <div class="filter-row" id="type-chips" role="group" aria-label="Filter by category"></div>
+
+        <div class="active-pills hidden" id="active-pills" aria-label="Active filters"></div>
+
         <div class="controls-foot">
           <span class="result-count" id="result-count" aria-live="polite"></span>
-          <label class="open-toggle"><input type="checkbox" id="open-only" /> Accepting applications only</label>
-          <button class="clear-btn" id="clear" type="button">Clear all filters</button>
+          <button class="clear-btn" id="clear" type="button">Clear all</button>
         </div>
       </div>
 

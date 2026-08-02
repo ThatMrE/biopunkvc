@@ -39,13 +39,23 @@ Every funding source in `assets/data.js` is one object:
   url:    "https://indiebio.co",
   hq:     "San Francisco / New York (SOSV)",
   blurb:  "One sentence on what/whom they fund at the earliest stage.",
-  call:   "Rolling"                     // Rolling | Cohorts | Recurring | Closed
+  call:   "Rolling",                    // Rolling | Cohorts | Recurring | Closed
+  sector: "Therapeutics"                // theme (auto-classified in build.js from focus/name/blurb)
 }
 ```
 
 **Categories (`type`):** Accelerator · Pre-seed/Seed VC · Corporate VC · Venture Studio ·
 Government Grant · Philanthropic Grant · Fellowship · Angel/Syndicate ·
 Prize/Competition · Crowdfunding.
+
+**Sectors (`sector`):** Therapeutics · Oncology & Immunology · Neuroscience · Rare & Genetic
+Disease · Longevity & Aging · Global & Infectious Health · Diagnostics & Devices · Genomics ·
+Platforms & Tools · Digital & Data / TechBio · Synbio & Biomanufacturing · Agtech & Food ·
+Climate & Industrial Bio · Cross-cutting / All Biotech. Sector is a soft theme tag derived
+from each entry's focus text, so the map can be sliced by area (Category and Sector are
+separate axes — a "Pre-seed/Seed VC" can be "Agtech & Food"). The site's filter bar keeps
+Category + Sector visible and tucks capital/stage/status/sort behind a "More filters"
+disclosure, with active filters shown as removable pills.
 
 **Application status (`call`):** `Rolling` (apply anytime) · `Cohorts` (batch intake) ·
 `Recurring` (cyclical call/RFA) · `Closed` (dormant). Surfaced on each card and

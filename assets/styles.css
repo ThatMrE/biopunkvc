@@ -179,6 +179,36 @@ section { padding: 70px 0; }
 .chip[aria-pressed="true"] { background: var(--green); color: #071b12; border-color: var(--green); }
 .chip .cnt { opacity: .6; font-weight: 500; margin-left: 4px; }
 
+/* Compact filter bar */
+.search-row .select { flex: 0 1 auto; min-width: 150px; }
+.more-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--bg-3); border: 1px solid var(--line); color: var(--muted);
+  border-radius: var(--radius-sm); padding: 12px 16px;
+  font-family: var(--ff-head); font-size: 14px; cursor: pointer; white-space: nowrap; transition: all .18s ease;
+}
+.more-btn:hover { color: #fff; border-color: var(--muted-2); }
+.more-btn[aria-expanded="true"] { color: var(--green); border-color: rgba(0,255,136,.45); background: rgba(0,255,136,.06); }
+.more-btn svg { width: 16px; height: 16px; }
+.more-count {
+  background: var(--green); color: #071b12; font-size: 11px; font-weight: 700;
+  border-radius: 999px; min-width: 18px; height: 18px; display: inline-flex;
+  align-items: center; justify-content: center; padding: 0 5px; font-family: var(--ff-head);
+}
+.more-panel { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; padding-top: 14px; border-top: 1px solid var(--line); }
+
+.active-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(0,255,136,.08); border: 1px solid rgba(0,255,136,.3); color: #fff;
+  border-radius: 999px; padding: 5px 10px 5px 12px; font-size: 12.5px; font-family: var(--ff-body);
+  cursor: pointer; transition: all .15s ease;
+}
+.pill:hover { background: rgba(255,51,102,.12); border-color: var(--pink); }
+.pill .pk { color: var(--muted); font-family: var(--ff-head); font-size: 10.5px; text-transform: uppercase; letter-spacing: .5px; }
+.pill .x { font-size: 15px; line-height: 1; color: var(--muted-2); }
+.pill:hover .x { color: var(--pink); }
+
 .controls-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; flex-wrap: wrap; gap: 10px; }
 .result-count { font-size: 14px; color: var(--muted); margin-right: auto; }
 .result-count b { color: var(--green); font-family: var(--ff-head); }
