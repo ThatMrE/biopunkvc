@@ -29,6 +29,20 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "aglaunch",
+    "name": "AgLaunch",
+    "type": "Accelerator",
+    "capital": "Convertible/SAFE",
+    "stage": "Pre-seed",
+    "amount": "$100K",
+    "geo": "United States",
+    "focus": "Agtech / ag-biotech (farmer-centric)",
+    "url": "https://aglaunch.com",
+    "hq": "Memphis, TN",
+    "blurb": "Farmer-centric accelerator investing $100K plus on-farm trials into pre-seed agtech and biological-inputs startups.",
+    "call": "Cohorts"
+  },
+  {
     "id": "bakar-labs-uc-berkeley",
     "name": "Bakar Labs (UC Berkeley)",
     "type": "Accelerator",
@@ -97,6 +111,34 @@ window.CAPITAL_MAP = {
     "hq": "Tokyo, Japan",
     "blurb": "Japan's largest deep-tech accelerator incubates researcher founders in life sciences with gap funding, expertise and investment.",
     "call": "Cohorts"
+  },
+  {
+    "id": "big-idea-ventures",
+    "name": "Big Idea Ventures",
+    "type": "Accelerator",
+    "capital": "Convertible/SAFE",
+    "stage": "Pre-seed–Seed",
+    "amount": "$15K–$200K",
+    "geo": "US, Asia, Europe",
+    "focus": "Alt-protein / cultivated meat",
+    "url": "https://bigideaventures.com",
+    "hq": "New York, NY",
+    "blurb": "Cohort-based accelerator investing roughly $200K into earliest-stage alternative-protein and sustainable-food startups globally.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "biohub-taiwan-nbrp",
+    "name": "BioHub Taiwan (NBRP)",
+    "type": "Accelerator",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "In-kind lab & incubation",
+    "geo": "Taiwan",
+    "focus": "Biomedical & biotech startups",
+    "url": "https://nbrp.sinica.edu.tw/pages/12?locale=en",
+    "hq": "Taipei, Taiwan",
+    "blurb": "National Biotechnology Research Park incubator offering early biotech startups labs, mentoring and investor links at preferential rates.",
+    "call": "Rolling"
   },
   {
     "id": "bioinnovation-institute-bii",
@@ -169,6 +211,48 @@ window.CAPITAL_MAP = {
     "call": "Cohorts"
   },
   {
+    "id": "futurx",
+    "name": "FutuRx",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed",
+    "amount": "Up to ~$2M over incubation",
+    "geo": "Israel",
+    "focus": "Early-stage biopharma & therapeutics",
+    "url": "https://www.futurx.co.il/",
+    "hq": "Ness Ziona, Israel",
+    "blurb": "Israel Innovation Authority biotech incubator incepts early-stage biopharma ventures, funding them from concept to proof-of-concept.",
+    "call": "Rolling"
+  },
+  {
+    "id": "hkstp-incu-bio",
+    "name": "HKSTP Incu-Bio",
+    "type": "Accelerator",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "Up to HK$6M (~$770k)",
+    "geo": "Hong Kong",
+    "focus": "Biomedical & biotech startups",
+    "url": "https://www.hkstp.org/en/programmes/incubation/incu-bio",
+    "hq": "Hong Kong",
+    "blurb": "Four-year biomedical incubator giving early biotech startups non-dilutive subsidies, labs and regulatory funding at Hong Kong Science Park.",
+    "call": "Rolling"
+  },
+  {
+    "id": "hub71-plus-life-sciences",
+    "name": "Hub71+ Life Sciences",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "AED 500k (~$136k)",
+    "geo": "United Arab Emirates",
+    "focus": "Biotech, medtech & digital health",
+    "url": "https://www.hub71.com/",
+    "hq": "Abu Dhabi, UAE",
+    "blurb": "Abu Dhabi's specialist ecosystem giving early biotech, medtech and digital-health founders funding, labs and regulatory access.",
+    "call": "Cohorts"
+  },
+  {
     "id": "illumina-accelerator",
     "name": "Illumina Accelerator",
     "type": "Accelerator",
@@ -208,6 +292,20 @@ window.CAPITAL_MAP = {
     "url": "https://jlabs.jnjinnovation.com",
     "hq": "Multiple (South San Francisco lead)",
     "blurb": "No-strings incubator giving startups low-cost lab space and mentorship while taking no equity or IP.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "jumpstart-trailblazer-healthtech-accelerator",
+    "name": "JumpStart Trailblazer HealthTech Accelerator",
+    "type": "Accelerator",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "Up to $125k (non-dilutive)",
+    "geo": "Ohio, USA",
+    "focus": "Healthcare & health-tech startups",
+    "url": "https://www.jumpstartinc.org/",
+    "hq": "Cleveland, Ohio, USA",
+    "blurb": "Nonprofit's free accelerator gives Ohio healthcare founders up to $125k non-dilutive plus commercialization advising toward first capital.",
     "call": "Cohorts"
   },
   {
@@ -295,6 +393,20 @@ window.CAPITAL_MAP = {
     "call": "Cohorts"
   },
   {
+    "id": "social-alpha",
+    "name": "Social Alpha",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "₹15L–₹75L (~$18k–$90k)",
+    "geo": "India",
+    "focus": "Health, biotech & deep-tech impact",
+    "url": "https://www.socialalpha.org/",
+    "hq": "Bengaluru, India",
+    "blurb": "Science-startup platform giving Indian health and biotech founders milestone-based seed grants, incubation and market access.",
+    "call": "Cohorts"
+  },
+  {
     "id": "start-codon",
     "name": "Start Codon",
     "type": "Accelerator",
@@ -337,6 +449,20 @@ window.CAPITAL_MAP = {
     "call": "Cohorts"
   },
   {
+    "id": "svg-ventures-thrive",
+    "name": "SVG Ventures | THRIVE",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "Up to $1M",
+    "geo": "Global",
+    "focus": "Agrifood tech & climate",
+    "url": "https://thriveagrifood.com",
+    "hq": "San Jose, CA",
+    "blurb": "Runs global agrifood accelerator cohorts and impact challenges offering early-stage startups up to $1M investment.",
+    "call": "Cohorts"
+  },
+  {
     "id": "techstars-life-science-physical-health",
     "name": "Techstars (Life Science / Physical Health)",
     "type": "Accelerator",
@@ -348,6 +474,34 @@ window.CAPITAL_MAP = {
     "url": "https://www.techstars.com",
     "hq": "Boulder, CO",
     "blurb": "Mentorship-driven 13-week programs invest via SAFE/CEA into early health and life-science founders across global vertical tracks.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "the-yield-lab",
+    "name": "The Yield Lab",
+    "type": "Accelerator",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$100K–$500K",
+    "geo": "Global",
+    "focus": "Agrifood tech / ag-biotech",
+    "url": "https://theyieldlab.com",
+    "hq": "St. Louis, MO",
+    "blurb": "Global network of regional funds accelerating and seed-funding early-stage agrifood-tech companies.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "third-derivative",
+    "name": "Third Derivative",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (+investor network)",
+    "geo": "Global",
+    "focus": "Climate tech & industrial decarbonization",
+    "url": "https://www.third-derivative.org",
+    "hq": "Boulder, CO",
+    "blurb": "RMI's climate accelerator giving early hard-tech and industrial-bio startups mentorship, investor access and capital.",
     "call": "Cohorts"
   },
   {
@@ -363,6 +517,20 @@ window.CAPITAL_MAP = {
     "hq": "Zurich, Switzerland",
     "blurb": "Three-stage program funds pre-commercial Swiss academic spin-offs from idea to company with grants and convertible loans.",
     "call": "Rolling"
+  },
+  {
+    "id": "villgro-africa",
+    "name": "Villgro Africa",
+    "type": "Accelerator",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "$100k–$250k",
+    "geo": "Sub-Saharan Africa",
+    "focus": "Healthcare, biotech & medtech",
+    "url": "https://villgroafrica.org/",
+    "hq": "Nairobi, Kenya",
+    "blurb": "Incubates early-stage African health and biotech founders with catalytic seed capital, technical support and market access.",
+    "call": "Cohorts"
   },
   {
     "id": "y-combinator",
@@ -435,6 +603,20 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "agfunder",
+    "name": "AgFunder",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$3M",
+    "geo": "Global (US/UK/SG)",
+    "focus": "Agtech / ag-biotech & bioeconomy",
+    "url": "https://agfunder.com",
+    "hq": "San Francisco, CA",
+    "blurb": "Writes seed and Series A checks into agrifood, biology and climate deeptech founders worldwide.",
+    "call": "Rolling"
+  },
+  {
     "id": "alix-ventures",
     "name": "Alix Ventures",
     "type": "Pre-seed/Seed VC",
@@ -461,6 +643,104 @@ window.CAPITAL_MAP = {
     "hq": "Berlin, Germany",
     "blurb": "European seed firm backing health and bio founders in AI drug discovery, synthetic biology, and diagnostics.",
     "call": "Rolling"
+  },
+  {
+    "id": "anterra-capital",
+    "name": "Anterra Capital",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$1M–$10M",
+    "geo": "Europe & US",
+    "focus": "Agrifood biotech & digital ag",
+    "url": "https://www.anterracapital.com",
+    "hq": "Amsterdam, Netherlands",
+    "blurb": "Backs founders using biotech and digital tools across the agriculture value chain, from pre-seed onward.",
+    "call": "Rolling"
+  },
+  {
+    "id": "astanor-ventures",
+    "name": "Astanor Ventures",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$1M–$10M",
+    "geo": "Europe & US",
+    "focus": "Agrifood / ag-biotech impact",
+    "url": "https://astanor.com",
+    "hq": "Brussels, Belgium",
+    "blurb": "Impact investor backing early-stage founders across regenerative agrifood, ocean health and climate-resilient food systems.",
+    "call": "Rolling"
+  },
+  {
+    "id": "at-one-ventures",
+    "name": "At One Ventures",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$1M–$5M",
+    "geo": "North America",
+    "focus": "Climate & industrial bio / materials",
+    "url": "https://atoneventures.com",
+    "hq": "San Francisco, CA",
+    "blurb": "Leads seed rounds in synthetic biology, advanced materials and nature-positive deeptech startups.",
+    "call": "Rolling"
+  },
+  {
+    "id": "ben-franklin-technology-partners",
+    "name": "Ben Franklin Technology Partners",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "~$100k–$500k",
+    "geo": "Pennsylvania, USA",
+    "focus": "Life sciences, biotech & medical devices",
+    "url": "https://benfranklin.org/",
+    "hq": "Philadelphia, Pennsylvania, USA",
+    "blurb": "State-funded nonprofit makes earliest capital, counsel and connections investments into Pennsylvania life-science and biotech startups.",
+    "call": "Rolling"
+  },
+  {
+    "id": "better-ventures",
+    "name": "Better Ventures",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$500K–$1M",
+    "geo": "United States",
+    "focus": "Bioeconomy / biomanufacturing & foodtech",
+    "url": "https://www.better.vc",
+    "hq": "Oakland, CA",
+    "blurb": "Leads pre-seed and seed rounds in bioeconomy, biomanufacturing and foodtech founders replacing petrochemicals.",
+    "call": "Rolling"
+  },
+  {
+    "id": "biogenerator-ventures",
+    "name": "BioGenerator Ventures",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Mixed",
+    "stage": "Pre-seed–Seed",
+    "amount": "~$50k–$500k",
+    "geo": "St. Louis, USA",
+    "focus": "Bioscience startups",
+    "url": "https://www.biogeneratorventures.com/",
+    "hq": "St. Louis, Missouri, USA",
+    "blurb": "Nonprofit investor providing earliest funding, lab space and hands-on support to St. Louis bioscience founders.",
+    "call": "Rolling"
+  },
+  {
+    "id": "biotope-by-vib",
+    "name": "biotope by VIB",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "€250k/founder",
+    "geo": "Belgium",
+    "focus": "Biotech for planetary & human health",
+    "url": "https://biotope-ventures.com/",
+    "hq": "Ghent, Belgium",
+    "blurb": "VIB's founder-centric incubator invests €250k per founder to launch and de-risk earliest-stage Belgian biotech startups.",
+    "call": "Cohorts"
   },
   {
     "id": "boom-capital-ventures",
@@ -502,6 +782,20 @@ window.CAPITAL_MAP = {
     "url": "https://www.civilizationventures.com",
     "hq": "San Francisco, CA",
     "blurb": "Backs early founders in genomics, diagnostics, and computational biology, often writing among the first institutional checks.",
+    "call": "Rolling"
+  },
+  {
+    "id": "clear-current-capital",
+    "name": "Clear Current Capital",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$2M",
+    "geo": "US & Global",
+    "focus": "Alt-protein / cultivated meat & fermentation",
+    "url": "https://www.clearcurrentcapital.com",
+    "hq": "Vero Beach, FL",
+    "blurb": "Backs founders at the earliest stages in plant-based, cultivated and fermentation food technology.",
     "call": "Rolling"
   },
   {
@@ -617,6 +911,20 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "high-tech-gr-nderfonds-htgf",
+    "name": "High-Tech Gründerfonds (HTGF)",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "€0.6M–€4M (~$0.65M–$4.3M)",
+    "geo": "Germany",
+    "focus": "Deep tech & life sciences seed",
+    "url": "https://www.htgf.de/en/",
+    "hq": "Bonn, Germany",
+    "blurb": "Germany's most active seed investor, writing first pre-seed and seed cheques into life-science and biotech spin-offs.",
+    "call": "Rolling"
+  },
+  {
     "id": "humba-ventures",
     "name": "Humba Ventures",
     "type": "Pre-seed/Seed VC",
@@ -631,6 +939,20 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "kaust-innovation-fund",
+    "name": "KAUST Innovation Fund",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "Up to $500k (seed)",
+    "geo": "Saudi Arabia",
+    "focus": "Deep tech incl. health & biotech",
+    "url": "https://innovation.kaust.edu.sa/entrepreneurs/kaust-innovation-ventures/",
+    "hq": "Thuwal, Saudi Arabia",
+    "blurb": "Backs KAUST spinouts and Saudi deep-tech founders across health and biotech with seed equity up to $500k.",
+    "call": "Rolling"
+  },
+  {
     "id": "kdt-ventures",
     "name": "KdT Ventures",
     "type": "Pre-seed/Seed VC",
@@ -642,6 +964,20 @@ window.CAPITAL_MAP = {
     "url": "https://www.kdtventures.com",
     "hq": "North Carolina / Austin, TX",
     "blurb": "Often the first institutional check into frontier-science companies spanning therapeutics, tools, and molecular engineering.",
+    "call": "Rolling"
+  },
+  {
+    "id": "lever-vc",
+    "name": "Lever VC",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$500K–$3M",
+    "geo": "Global (US/EU/China)",
+    "focus": "Alt-protein / cultivated meat & dairy",
+    "url": "https://www.levervc.com",
+    "hq": "New York, NY",
+    "blurb": "Early-stage fund backing alternative meat, dairy and seafood founders at pre-seed and seed.",
     "call": "Rolling"
   },
   {
@@ -743,6 +1079,20 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "s2g-ventures-builders-vision",
+    "name": "S2G Ventures (Builders Vision)",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$1M–$10M",
+    "geo": "North America & Europe",
+    "focus": "Food, ag, oceans & bioeconomy",
+    "url": "https://www.s2ginvestments.com",
+    "hq": "Chicago, IL",
+    "blurb": "Builders Vision's venture arm backing early-stage founders across food, agriculture, oceans and the bioeconomy.",
+    "call": "Rolling"
+  },
+  {
     "id": "section-32",
     "name": "Section 32",
     "type": "Pre-seed/Seed VC",
@@ -754,6 +1104,104 @@ window.CAPITAL_MAP = {
     "url": "https://www.section32.com",
     "hq": "San Diego, CA",
     "blurb": "Bill Maris's firm backing seed and Series A companies at the frontiers of technology, healthcare, and biotech.",
+    "call": "Rolling"
+  },
+  {
+    "id": "stray-dog-capital",
+    "name": "Stray Dog Capital",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$500K–$5M",
+    "geo": "US & Global",
+    "focus": "Alt-protein / cultivated meat & fermentation",
+    "url": "https://straydogcapital.com",
+    "hq": "Leawood, KS",
+    "blurb": "Early-mover fund leading seed rounds in plant-based, cultivated and precision-fermentation food companies.",
+    "call": "Rolling"
+  },
+  {
+    "id": "supply-change-capital",
+    "name": "Supply Change Capital",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$1M",
+    "geo": "United States",
+    "focus": "Food-tech & ag / future of food",
+    "url": "https://supplychange.fund",
+    "hq": "Chicago, IL",
+    "blurb": "Writes pre-seed and seed checks into technology modernizing the food supply chain and ingredients.",
+    "call": "Rolling"
+  },
+  {
+    "id": "synthesis-capital",
+    "name": "Synthesis Capital",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$1M–$15M",
+    "geo": "Global (UK/US)",
+    "focus": "Alt-protein / food & modern biotech",
+    "url": "https://www.synthesis.capital",
+    "hq": "London, UK",
+    "blurb": "Backs foodtech and modern-biotech founders from seed through early growth across the food value chain.",
+    "call": "Rolling"
+  },
+  {
+    "id": "tedco",
+    "name": "TEDCO",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Mixed",
+    "stage": "Seed",
+    "amount": "$100k–$500k",
+    "geo": "Maryland, USA",
+    "focus": "Human-health life sciences",
+    "url": "https://www.tedcomd.com/funding/seed-funds",
+    "hq": "Columbia, Maryland, USA",
+    "blurb": "Maryland's Life Science Investment Fund makes $100k–$500k convertible and equity seed investments in FDA-pathway health startups.",
+    "call": "Rolling"
+  },
+  {
+    "id": "tenacious-ventures",
+    "name": "Tenacious Ventures",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$200K–$1M",
+    "geo": "Australia",
+    "focus": "Agtech / ag-biotech",
+    "url": "https://tenacious.ventures",
+    "hq": "Melbourne, Australia",
+    "blurb": "Australia's dedicated agrifood-tech fund making first pre-seed and seed checks into agtech founders.",
+    "call": "Rolling"
+  },
+  {
+    "id": "trailhead-capital",
+    "name": "Trailhead Capital",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$2M",
+    "geo": "North America",
+    "focus": "Regenerative ag / ag-biotech",
+    "url": "https://www.trailheadcap.com",
+    "hq": "Denver, CO",
+    "blurb": "Seed-stage fund backing tech-enabled companies scaling regenerative agriculture across the food value chain.",
+    "call": "Rolling"
+  },
+  {
+    "id": "voyager-ventures",
+    "name": "Voyager Ventures",
+    "type": "Pre-seed/Seed VC",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$1M–$5M",
+    "geo": "North America & Europe",
+    "focus": "Climate & industrial bio / materials",
+    "url": "https://www.voyagervc.com",
+    "hq": "San Francisco, CA",
+    "blurb": "Early-stage climate fund backing founders across materials, industrial systems, food and carbon removal.",
     "call": "Rolling"
   },
   {
@@ -1149,6 +1597,20 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "gridx-grid-exponential",
+    "name": "GRIDX (GRID Exponential)",
+    "type": "Venture Studio",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250k (+ up to $1M)",
+    "geo": "Latin America",
+    "focus": "Science-based biotech ventures",
+    "url": "https://www.gridexponential.com/",
+    "hq": "Buenos Aires, Argentina",
+    "blurb": "Latin America's largest biotech company builder invests $250k to create and fund earliest-stage science-based startups.",
+    "call": "Cohorts"
+  },
+  {
     "id": "medicxi",
     "name": "Medicxi",
     "type": "Venture Studio",
@@ -1303,6 +1765,20 @@ window.CAPITAL_MAP = {
     "call": "Recurring"
   },
   {
+    "id": "arpa-e",
+    "name": "ARPA-E",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "$500K–$10M+",
+    "geo": "United States",
+    "focus": "Bioenergy crops & industrial bio",
+    "url": "https://arpa-e.energy.gov",
+    "hq": "Washington, DC",
+    "blurb": "Funds transformative early-stage energy R&D, including bioenergy crops, seaweed cultivation and biomanufacturing.",
+    "call": "Recurring"
+  },
+  {
     "id": "arpa-h",
     "name": "ARPA-H",
     "type": "Government Grant",
@@ -1317,6 +1793,20 @@ window.CAPITAL_MAP = {
     "call": "Recurring"
   },
   {
+    "id": "aws-preseed-deep-tech",
+    "name": "aws PreSeed – Deep Tech",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Up to €300k (~$325k)",
+    "geo": "Austria",
+    "focus": "Pharma/biotech, devices, digital health",
+    "url": "https://www.aws.at/en/aws-preseed-deep-tech/",
+    "hq": "Vienna, Austria",
+    "blurb": "Austria Wirtschaftsservice's non-dilutive pre-startup grant funds life-science and biotech founders building on applied deep-tech R&D.",
+    "call": "Rolling"
+  },
+  {
     "id": "barda-drive",
     "name": "BARDA DRIVe",
     "type": "Government Grant",
@@ -1328,6 +1818,20 @@ window.CAPITAL_MAP = {
     "url": "https://drive.hhs.gov",
     "hq": "US (BARDA, HHS)",
     "blurb": "BARDA DRIVe's EZ-BAA gives early-stage startups under $750K non-dilutive for transformative health-security and pandemic-preparedness technologies.",
+    "call": "Recurring"
+  },
+  {
+    "id": "biomade",
+    "name": "BioMADE",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "$100K–$2M+",
+    "geo": "United States",
+    "focus": "Bioindustrial manufacturing / industrial bio",
+    "url": "https://www.biomade.org",
+    "hq": "St. Paul, MN",
+    "blurb": "Manufacturing-USA institute funding member project calls to advance domestic bioindustrial manufacturing and scale-up.",
     "call": "Recurring"
   },
   {
@@ -1359,6 +1863,20 @@ window.CAPITAL_MAP = {
     "call": "Recurring"
   },
   {
+    "id": "cancer-prevention-research-institute-of-texas-cprit",
+    "name": "Cancer Prevention & Research Institute of Texas (CPRIT)",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Seed",
+    "amount": "Up to $3M",
+    "geo": "Texas, USA",
+    "focus": "Cancer therapeutics & diagnostics",
+    "url": "https://cprit.texas.gov/",
+    "hq": "Austin, Texas, USA",
+    "blurb": "State fund giving non-dilutive product-development and seed awards to early Texas-based cancer therapeutics and diagnostics companies.",
+    "call": "Recurring"
+  },
+  {
     "id": "carb-x",
     "name": "CARB-X",
     "type": "Government Grant",
@@ -1370,6 +1888,20 @@ window.CAPITAL_MAP = {
     "url": "https://carb-x.org",
     "hq": "US (Boston University; public-private partnership)",
     "blurb": "CARB-X, a public-private partnership, funds early preclinical antibacterial R&D worldwide to combat drug-resistant bacteria and diagnostics.",
+    "call": "Recurring"
+  },
+  {
+    "id": "cdti-neotec",
+    "name": "CDTI Neotec",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "Up to €325k (~$350k)",
+    "geo": "Spain",
+    "focus": "R&D-intensive startups incl. biotech",
+    "url": "https://www.cdti.es/en/ayudas/neotec",
+    "hq": "Madrid, Spain",
+    "blurb": "Spain's flagship non-dilutive grant funds young R&D-heavy companies, including biotech, up to €325k for early business plans.",
     "call": "Recurring"
   },
   {
@@ -1415,6 +1947,20 @@ window.CAPITAL_MAP = {
     "call": "Recurring"
   },
   {
+    "id": "cradle-fund-cip-spark",
+    "name": "Cradle Fund (CIP SPARK)",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "RM150k (~$32k)",
+    "geo": "Malaysia",
+    "focus": "Tech startups incl. healthtech/biotech",
+    "url": "https://www.cradle.com.my/",
+    "hq": "Cyberjaya, Malaysia",
+    "blurb": "Malaysia's early-stage agency grants idea-to-MVP funding to tech founders, including healthtech and biotech ventures.",
+    "call": "Rolling"
+  },
+  {
     "id": "darpa-biological-technologies-office-bto",
     "name": "DARPA Biological Technologies Office (BTO)",
     "type": "Government Grant",
@@ -1426,6 +1972,20 @@ window.CAPITAL_MAP = {
     "url": "https://www.darpa.mil/about/offices/bto",
     "hq": "US (DoD)",
     "blurb": "DARPA BTO funds high-risk, high-reward research in synthetic biology, biosecurity and neurotech, partnering with founders and universities.",
+    "call": "Recurring"
+  },
+  {
+    "id": "doe-bioenergy-technologies-office-beto",
+    "name": "DOE Bioenergy Technologies Office (BETO)",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "$500K–$10M+",
+    "geo": "United States",
+    "focus": "Bioenergy & biobased products / industrial bio",
+    "url": "https://www.energy.gov/eere/bioenergy",
+    "hq": "Washington, DC",
+    "blurb": "Issues competitive NOFOs funding early R&D in biofuels, biochemicals and biobased industrial products.",
     "call": "Recurring"
   },
   {
@@ -1454,6 +2014,20 @@ window.CAPITAL_MAP = {
     "url": "https://eic.ec.europa.eu",
     "hq": "EU (European Commission)",
     "blurb": "EIC Pathfinder funds visionary early-stage research (TRL 1-3) proving feasibility of disruptive deep-tech and biotech breakthroughs.",
+    "call": "Recurring"
+  },
+  {
+    "id": "embrapii",
+    "name": "EMBRAPII",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "Cost-shared R&D grants (R$)",
+    "geo": "Brazil",
+    "focus": "Industrial R&D incl. health & biotech",
+    "url": "https://embrapii.org.br/en/",
+    "hq": "Brasília, Brazil",
+    "blurb": "Brazilian agency co-funds pre-competitive R&D with non-dilutive grants, backing early health and biotech innovation projects.",
     "call": "Recurring"
   },
   {
@@ -1569,6 +2143,20 @@ window.CAPITAL_MAP = {
     "call": "Recurring"
   },
   {
+    "id": "mlsc-impact-catalyst",
+    "name": "MLSC Impact Catalyst",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Seed",
+    "amount": "Up to $250k",
+    "geo": "Massachusetts, USA",
+    "focus": "Translational life sciences",
+    "url": "https://www.masslifesciences.com/",
+    "hq": "Waltham, Massachusetts, USA",
+    "blurb": "Milestone-based non-dilutive seed grants for early life-science startups tackling underserved patients and hard-to-commercialize disease areas.",
+    "call": "Recurring"
+  },
+  {
     "id": "mrff-medical-research-future-fund",
     "name": "MRFF (Medical Research Future Fund)",
     "type": "Government Grant",
@@ -1611,6 +2199,20 @@ window.CAPITAL_MAP = {
     "call": "Recurring"
   },
   {
+    "id": "north-carolina-biotechnology-center-ncbiotech",
+    "name": "North Carolina Biotechnology Center (NCBiotech)",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "$50k–$500k",
+    "geo": "North Carolina, USA",
+    "focus": "Life-science company inception",
+    "url": "https://www.ncbiotech.org/funding/company-funding",
+    "hq": "Research Triangle Park, NC, USA",
+    "blurb": "State bio hub offering Company Inception Loans and grants to seed new North Carolina life-science ventures.",
+    "call": "Recurring"
+  },
+  {
     "id": "nrc-irap",
     "name": "NRC IRAP",
     "type": "Government Grant",
@@ -1636,6 +2238,48 @@ window.CAPITAL_MAP = {
     "url": "https://seedfund.nsf.gov",
     "hq": "US (NSF)",
     "blurb": "America's Seed Fund Phase I awards up to $305K non-dilutive to early deep-tech and biotech startups for feasibility R&D.",
+    "call": "Recurring"
+  },
+  {
+    "id": "qrdi-qatar-open-innovation",
+    "name": "QRDI Qatar Open Innovation",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "Up to $150k",
+    "geo": "Qatar",
+    "focus": "Prototype development incl. health/biotech",
+    "url": "https://www.qrdi.org.qa/",
+    "hq": "Doha, Qatar",
+    "blurb": "QRDI Council funds innovators up to $150k to develop and pilot prototypes, including health and biotech solutions, in Qatar.",
+    "call": "Recurring"
+  },
+  {
+    "id": "tia-seed-fund",
+    "name": "TIA Seed Fund",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "ZAR grants (~$5k–$50k)",
+    "geo": "South Africa",
+    "focus": "Proof-of-concept incl. biotech/devices",
+    "url": "https://www.tia.org.za/funding-instruments/",
+    "hq": "Pretoria, South Africa",
+    "blurb": "Technology Innovation Agency grants help South African researchers and SMEs turn biotech ideas into fundable prototypes.",
+    "call": "Recurring"
+  },
+  {
+    "id": "usda-nifa-sbir",
+    "name": "USDA NIFA SBIR",
+    "type": "Government Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "$125K–$175K (Phase I)",
+    "geo": "United States",
+    "focus": "Agriculture & food bioscience",
+    "url": "https://www.nifa.usda.gov",
+    "hq": "Washington, DC",
+    "blurb": "Competitive Phase I grants funding small businesses' earliest agriculture and food-bioscience R&D.",
     "call": "Recurring"
   },
   {
@@ -2101,6 +2745,20 @@ window.CAPITAL_MAP = {
     "call": "Recurring"
   },
   {
+    "id": "prime-coalition",
+    "name": "Prime Coalition",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (catalytic)",
+    "geo": "US & Global",
+    "focus": "Climate & industrial bio (catalytic capital)",
+    "url": "https://www.primecoalition.org",
+    "hq": "Cambridge, MA",
+    "blurb": "Charity channeling philanthropic catalytic capital and recoverable grants into hard-to-fund early climate-solution companies.",
+    "call": "Rolling"
+  },
+  {
     "id": "progeria-research-foundation",
     "name": "Progeria Research Foundation",
     "type": "Philanthropic Grant",
@@ -2140,6 +2798,20 @@ window.CAPITAL_MAP = {
     "url": "https://www.renaissancephilanthropy.org",
     "hq": "Washington, DC",
     "blurb": "Designs thesis-driven philanthropic funds backing ambitious science too big for academia yet too risky for VC, including health innovation.",
+    "call": "Recurring"
+  },
+  {
+    "id": "schmidt-marine-technology-partners",
+    "name": "Schmidt Marine Technology Partners",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed",
+    "amount": "$100K–$500K",
+    "geo": "Global",
+    "focus": "Marine / ocean & environmental bio-tech",
+    "url": "https://schmidtmarine.org",
+    "hq": "Palo Alto, CA",
+    "blurb": "Grants funding startups and nonprofits developing early-stage ocean, fisheries and marine-conservation technology.",
     "call": "Recurring"
   },
   {
@@ -2253,6 +2925,34 @@ window.CAPITAL_MAP = {
     "hq": "New York, NY",
     "blurb": "Early Investigator and Career Development grants seed earliest research on Marfan and related genetic aortic conditions.",
     "call": "Recurring"
+  },
+  {
+    "id": "venturewell-e-team-program",
+    "name": "VentureWell E-Team Program",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "$5k + up to $20k",
+    "geo": "USA (national)",
+    "focus": "Student STEM & health inventors",
+    "url": "https://venturewell.org/e-team-program/",
+    "hq": "Hadley, Massachusetts, USA",
+    "blurb": "Nonprofit grants and training move student inventors' earliest health and biotech innovations from lab toward the market.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "warf-accelerator",
+    "name": "WARF Accelerator",
+    "type": "Philanthropic Grant",
+    "capital": "Non-dilutive",
+    "stage": "Idea",
+    "amount": "Milestone POC funding (varies)",
+    "geo": "Wisconsin, USA",
+    "focus": "Biopharma, medical devices & diagnostics",
+    "url": "https://www.warf.org/warf-accelerator/",
+    "hq": "Madison, Wisconsin, USA",
+    "blurb": "University foundation de-risks UW-Madison biopharma and diagnostic inventions with milestone proof-of-concept funding and industry mentors.",
+    "call": "Rolling"
   },
   {
     "id": "wellcome-leap",
@@ -2409,6 +3109,34 @@ window.CAPITAL_MAP = {
     "call": "Recurring"
   },
   {
+    "id": "african-business-angel-network-aban",
+    "name": "African Business Angel Network (ABAN)",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (syndicated)",
+    "geo": "Pan-Africa",
+    "focus": "Healthtech & healthcare",
+    "url": "https://abanangels.org/",
+    "hq": "Lagos, Nigeria",
+    "blurb": "Pan-African angel network whose members actively back earliest-stage healthcare and healthtech founders across the continent.",
+    "call": "Rolling"
+  },
+  {
+    "id": "alliance-of-angels",
+    "name": "Alliance of Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$25K–$1M",
+    "geo": "Seattle / Pacific Northwest, USA",
+    "focus": "Life sciences & biotech",
+    "url": "https://www.allianceofangels.com/",
+    "hq": "Seattle, Washington",
+    "blurb": "PNW's most active angel group; roughly half its fund backs therapeutics, biomaterials and biotech at seed.",
+    "call": "Rolling"
+  },
+  {
     "id": "angellist-biotech-syndicates",
     "name": "AngelList (biotech syndicates)",
     "type": "Angel/Syndicate",
@@ -2420,6 +3148,20 @@ window.CAPITAL_MAP = {
     "url": "https://www.angellist.com",
     "hq": "San Francisco, CA",
     "blurb": "Platform hosting biotech-focused angel syndicates and rolling funds that pool capital into earliest-stage rounds.",
+    "call": "Rolling"
+  },
+  {
+    "id": "anjos-do-brasil",
+    "name": "Anjos do Brasil",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (syndicated)",
+    "geo": "Brazil (national)",
+    "focus": "Healthtech & life science",
+    "url": "https://anjosdobrasil.net/",
+    "hq": "São Paulo, Brazil",
+    "blurb": "Brazil's largest angel network, whose members back earliest-stage healthtech and life-science founders nationwide.",
     "call": "Rolling"
   },
   {
@@ -2437,6 +3179,34 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "bansea",
+    "name": "BANSEA",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$100K–$1M",
+    "geo": "Singapore / Southeast Asia",
+    "focus": "Healthtech & deeptech",
+    "url": "https://www.bansea.org/",
+    "hq": "Singapore",
+    "blurb": "Southeast Asia's oldest angel network, funding early-stage healthtech and deeptech founders across the region.",
+    "call": "Recurring"
+  },
+  {
+    "id": "bioangels-india",
+    "name": "BioAngels (India)",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (syndicated)",
+    "geo": "India (national)",
+    "focus": "Biotech, medtech & pharma",
+    "url": "https://bioangels.vc/",
+    "hq": "India",
+    "blurb": "India's first sector-specific biotech angel network, an IAN–BIRAC partnership backing earliest-stage biotech and medtech.",
+    "call": "Rolling"
+  },
+  {
     "id": "bios-angels-alix-ventures",
     "name": "BIOS Angels (Alix Ventures)",
     "type": "Angel/Syndicate",
@@ -2448,6 +3218,62 @@ window.CAPITAL_MAP = {
     "url": "https://www.alix.vc",
     "hq": "San Francisco, CA",
     "blurb": "Life-science angel syndicate run by Alix Ventures, writing early pre-seed and seed checks into TechBio.",
+    "call": "Rolling"
+  },
+  {
+    "id": "bluetree-allied-angels",
+    "name": "BlueTree Allied Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$100K–$1M",
+    "geo": "Pittsburgh / W. Pennsylvania, USA",
+    "focus": "Biotech & healthcare",
+    "url": "https://www.bluetreealliedangels.com/",
+    "hq": "Wexford, Pennsylvania",
+    "blurb": "Western Pennsylvania's leading angel network, seed-funding healthcare, biotechnology and life-science startups regionally.",
+    "call": "Rolling"
+  },
+  {
+    "id": "boston-harbor-angels",
+    "name": "Boston Harbor Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$250K–$1.5M",
+    "geo": "Boston, USA",
+    "focus": "Life sciences & biotech",
+    "url": "https://bostonharborangels.com/",
+    "hq": "Boston, Massachusetts",
+    "blurb": "Backs early-stage biotech such as hydrogel and immuno-oncology ventures, syndicating seed rounds with other angel groups.",
+    "call": "Rolling"
+  },
+  {
+    "id": "cambridge-angels",
+    "name": "Cambridge Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "£50K–£1M",
+    "geo": "Cambridge, UK",
+    "focus": "Life sciences & digital health",
+    "url": "https://www.cambridgeangels.com/",
+    "hq": "Cambridge, United Kingdom",
+    "blurb": "Cambridge network with deep pharma and PhD bench, backing early-stage life-science and digital-health founders.",
+    "call": "Rolling"
+  },
+  {
+    "id": "central-texas-angel-network-ctan",
+    "name": "Central Texas Angel Network (CTAN)",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$2M (syndicated)",
+    "geo": "Austin / Texas, USA",
+    "focus": "Biotech & life science",
+    "url": "https://www.ctan.com/",
+    "hq": "Austin, Texas",
+    "blurb": "One of the most active US angel groups; funds pre-seed and seed biotech, diagnostics and therapeutics founders.",
     "call": "Rolling"
   },
   {
@@ -2493,6 +3319,48 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "desert-angels",
+    "name": "Desert Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$100K–$1M",
+    "geo": "Tucson / Arizona, USA",
+    "focus": "Life science & medtech",
+    "url": "https://desertangels.org/",
+    "hq": "Tucson, Arizona",
+    "blurb": "Top-ranked Southwest angel group backing early-stage cancer therapeutics, diagnostics and medical-device startups.",
+    "call": "Rolling"
+  },
+  {
+    "id": "dubai-angel-investors",
+    "name": "Dubai Angel Investors",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$50K–$500K",
+    "geo": "Dubai / UAE",
+    "focus": "Healthtech & biotech",
+    "url": "https://www.dubaiangelinvestors.me/",
+    "hq": "Dubai, UAE",
+    "blurb": "Member-led micro-VC of 100+ angels backing early-stage healthtech and biotech founders across the Middle East.",
+    "call": "Rolling"
+  },
+  {
+    "id": "eban-european-business-angel-network",
+    "name": "EBAN (European Business Angel Network)",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (syndicated)",
+    "geo": "Europe (pan-European)",
+    "focus": "Life sciences & biotech",
+    "url": "https://www.eban.org/",
+    "hq": "Brussels, Belgium",
+    "blurb": "Pan-European angel association whose member networks prioritise earliest-stage life-science and biotech investing.",
+    "call": "Recurring"
+  },
+  {
     "id": "foundation-fighting-blindness-rd-fund",
     "name": "Foundation Fighting Blindness RD Fund",
     "type": "Angel/Syndicate",
@@ -2521,6 +3389,20 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "indian-angel-network",
+    "name": "Indian Angel Network",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$500K–$1M (seed)",
+    "geo": "India (national)",
+    "focus": "Biotech & healthtech",
+    "url": "https://www.indianangelnetwork.com/",
+    "hq": "Gurugram / New Delhi, India",
+    "blurb": "India's largest angel network, actively seed-funding biotech and healthtech founders including recent biotech deals.",
+    "call": "Rolling"
+  },
+  {
     "id": "keiretsu-forum",
     "name": "Keiretsu Forum",
     "type": "Angel/Syndicate",
@@ -2532,6 +3414,20 @@ window.CAPITAL_MAP = {
     "url": "https://www.keiretsuforum.com",
     "hq": "Bay Area, CA",
     "blurb": "World's largest angel network with active healthcare and life-science deal flow across dozens of global chapters.",
+    "call": "Rolling"
+  },
+  {
+    "id": "launchpad-venture-group",
+    "name": "Launchpad Venture Group",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$2M (syndicated)",
+    "geo": "Boston / New England, USA",
+    "focus": "Life science, diagnostics & medtech",
+    "url": "https://www.launchpadventuregroup.com/",
+    "hq": "Newton, Massachusetts",
+    "blurb": "One of the Northeast's most active angel groups, seed-funding diagnostics, medical devices and healthcare-IT startups.",
     "call": "Rolling"
   },
   {
@@ -2577,6 +3473,20 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "medical-angels",
+    "name": "Medical Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (syndicated)",
+    "geo": "Australia",
+    "focus": "Medical, biotech & health",
+    "url": "https://medangels.com.au/",
+    "hq": "Australia",
+    "blurb": "Health-specific syndicate of 1,000+ clinicians investing in earliest-stage medical, biotech and medtech ventures.",
+    "call": "Rolling"
+  },
+  {
     "id": "mid-atlantic-bio-angels",
     "name": "Mid-Atlantic Bio Angels",
     "type": "Angel/Syndicate",
@@ -2591,6 +3501,48 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "naco-national-angel-capital-organization",
+    "name": "NACO (National Angel Capital Organization)",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (syndicated)",
+    "geo": "Canada (national)",
+    "focus": "Healthtech & biotech",
+    "url": "https://nacocanada.com/",
+    "hq": "Toronto, Canada",
+    "blurb": "Umbrella of Canada's angel groups whose member networks back earliest-stage healthtech and biotech ventures nationwide.",
+    "call": "Rolling"
+  },
+  {
+    "id": "o2h-ventures",
+    "name": "o2h Ventures",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "£10K min (SEIS/EIS fund)",
+    "geo": "Cambridge, UK",
+    "focus": "Biotech therapeutics & bio-AI",
+    "url": "https://o2hventures.com/",
+    "hq": "Cambridge, United Kingdom",
+    "blurb": "Specialist SEIS/EIS biotech fund and angel community backing pre-seed therapeutics and biotech-AI startups.",
+    "call": "Cohorts"
+  },
+  {
+    "id": "oxford-investment-opportunity-network-oion",
+    "name": "Oxford Investment Opportunity Network (OION)",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "£25K–£300K",
+    "geo": "Oxford / UK",
+    "focus": "Biotech & life sciences",
+    "url": "https://www.oion.co.uk/",
+    "hq": "Oxford, United Kingdom",
+    "blurb": "One of the UK's oldest and most active angel networks, funding SEIS/EIS biotech and life-science startups.",
+    "call": "Recurring"
+  },
+  {
     "id": "portfolia",
     "name": "Portfolia",
     "type": "Angel/Syndicate",
@@ -2602,6 +3554,76 @@ window.CAPITAL_MAP = {
     "url": "https://www.portfolia.co",
     "hq": "Palo Alto, CA",
     "blurb": "Member-led venture funds letting individual investors back early-stage women's-health and femtech biotech companies.",
+    "call": "Rolling"
+  },
+  {
+    "id": "propel-x",
+    "name": "Propel(x)",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (syndicated)",
+    "geo": "USA (online, nationwide)",
+    "focus": "Deep tech & life sciences",
+    "url": "https://www.propelx.com/",
+    "hq": "San Francisco, California",
+    "blurb": "Online angel platform whose top sector is life sciences, connecting science founders with expert-vetted seed capital.",
+    "call": "Rolling"
+  },
+  {
+    "id": "queen-city-angels-qca-ventures",
+    "name": "Queen City Angels (QCA Ventures)",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$2M",
+    "geo": "Cincinnati / Midwest, USA",
+    "focus": "Life sciences & biotech",
+    "url": "https://www.qca.com/",
+    "hq": "Cincinnati, Ohio",
+    "blurb": "Life sciences is its top sector; provides early equity, syndication and mentoring to therapeutics and biotech founders.",
+    "call": "Rolling"
+  },
+  {
+    "id": "rockies-venture-club",
+    "name": "Rockies Venture Club",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$25K–$1M (syndicated)",
+    "geo": "Denver / Rocky Mountains, USA",
+    "focus": "Life sciences & biotech",
+    "url": "https://www.rockiesventureclub.org/",
+    "hq": "Denver, Colorado",
+    "blurb": "Colorado's oldest angel network runs dedicated life-science programming, funding pre-seed to Series A bioscience startups.",
+    "call": "Recurring"
+  },
+  {
+    "id": "sand-hill-angels",
+    "name": "Sand Hill Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$300K–$500K",
+    "geo": "Silicon Valley, USA",
+    "focus": "Life science & medtech",
+    "url": "https://www.sandhillangels.com/",
+    "hq": "Silicon Valley, California",
+    "blurb": "Silicon Valley angel group investing seed capital in medical devices, diagnostics and bioinformatics startups.",
+    "call": "Rolling"
+  },
+  {
+    "id": "sginnovate",
+    "name": "SGInnovate",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "Varies (co-invest)",
+    "geo": "Singapore",
+    "focus": "Biotech & deeptech",
+    "url": "https://www.sginnovate.com/",
+    "hq": "Singapore",
+    "blurb": "Government-backed deep-tech investor catalysing earliest-stage biomedical, biotech and health-science startups in Singapore.",
     "call": "Rolling"
   },
   {
@@ -2619,6 +3641,48 @@ window.CAPITAL_MAP = {
     "call": "Rolling"
   },
   {
+    "id": "tech-coast-angels",
+    "name": "Tech Coast Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$2M (syndicated)",
+    "geo": "Southern California, USA",
+    "focus": "Life science & biotech",
+    "url": "https://www.techcoastangels.com/",
+    "hq": "Southern California",
+    "blurb": "Large multi-chapter California angel network funding earliest-stage life science, biotech and medtech founders.",
+    "call": "Rolling"
+  },
+  {
+    "id": "visiontech-angels",
+    "name": "VisionTech Angels",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Pre-seed–Seed",
+    "amount": "$100K–$1M",
+    "geo": "Indiana / Ohio, USA",
+    "focus": "Life science & medtech",
+    "url": "https://visiontech-partners.com/",
+    "hq": "Indianapolis, Indiana",
+    "blurb": "Midwest angel network backing early-stage drug discovery, diagnostics and medical-device startups across Indiana and Ohio.",
+    "call": "Rolling"
+  },
+  {
+    "id": "wisconsin-investment-partners",
+    "name": "Wisconsin Investment Partners",
+    "type": "Angel/Syndicate",
+    "capital": "Equity",
+    "stage": "Seed",
+    "amount": "$100K–$500K",
+    "geo": "Madison / Wisconsin, USA",
+    "focus": "Life science & biotech",
+    "url": "https://wisinvpartners.com/",
+    "hq": "Madison, Wisconsin",
+    "blurb": "Wisconsin's foremost angel group, focused on life-science and technology seed investing in local biotech startups.",
+    "call": "Rolling"
+  },
+  {
     "id": "broadignite",
     "name": "BroadIgnite",
     "type": "Prize/Competition",
@@ -2630,6 +3694,20 @@ window.CAPITAL_MAP = {
     "url": "https://giving.broadinstitute.org/broadignite",
     "hq": "Cambridge, MA",
     "blurb": "Broad Institute award giving early-career scientists non-dilutive funding for high-risk research too early for traditional grants.",
+    "call": "Recurring"
+  },
+  {
+    "id": "grow-ny",
+    "name": "Grow-NY",
+    "type": "Prize/Competition",
+    "capital": "Non-dilutive",
+    "stage": "Pre-seed–Seed",
+    "amount": "$250K–$1M",
+    "geo": "Global (NY-based)",
+    "focus": "Food & agriculture tech",
+    "url": "https://www.grow-ny.com",
+    "hq": "Ithaca, NY",
+    "blurb": "Annual food-and-ag startup competition awarding $3M total, including a $1M non-dilutive grand prize.",
     "call": "Recurring"
   },
   {
