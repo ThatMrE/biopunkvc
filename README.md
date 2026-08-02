@@ -1,171 +1,78 @@
-# Biopunk VC Website
+# Biopunk — The Early-Stage Biotech Capital Map
 
-A professional, dark, and bold single-page website for Biopunk VC - a $25M pre-seed biotech residency fund.
+**[biopunkvc.com](https://biopunkvc.com)** is an open, continuously-updated map of the
+**earliest financing for biotech founders — in every form**: non-dilutive grants,
+accelerators, pre-seed & seed VCs, venture studios, fellowships, angel syndicates,
+prizes, and crowdfunding.
 
-## Overview
+Biopunk is a **resource, not a fund.** (The investing happens at
+[haus.fund](https://haus.fund); the broader ecosystem lives at
+[biopunk.house](https://biopunk.house).)
 
-This is a fast, responsive, framework-free website built with vanilla HTML, CSS, and JavaScript. It's optimized for Netlify deployment and features a punk-rock-biotech aesthetic with neon green and pink accents.
+## What's here
 
-## File Structure
+A fast, framework-free static site. Everything is plain HTML/CSS/JS — no build step.
 
 ```
-/website/
-├── index.html          # Main single-page application (773 lines, 25KB)
-├── netlify.toml        # Netlify configuration
-├── _redirects          # URL redirect rules
-└── README.md           # This file
+index.html          Landing page + the interactive Capital Map
+assets/styles.css    Styles (dark / neon-green / punk-pink brand)
+assets/data.js       THE DATA — the directory of funding sources (edit this to contribute)
+assets/app.js        Rendering, search, filtering, sorting, submit-form logic
+netlify.toml         Netlify config (www→apex redirect, headers, no-cache for data.js)
+_redirects           www→apex redirect
 ```
 
-## Key Features
+## The data model
 
-### Design & Branding
-- **Primary Background**: #0A0A0A (near black)
-- **Neon Green Accent**: #00FF88 (biotech/tech feel)
-- **Punk Pink Accent**: #FF3366 (secondary emphasis)
-- **Typography**: Space Grotesk (headers), Inter (body)
-- **Dark Mode**: Entire site optimized for reduced eye strain and modern aesthetic
+Every funding source in `assets/data.js` is one object:
 
-### Sections Included
-
-1. **Hero** - Full viewport banner with "$25M Fund I" messaging
-2. **Thesis** - Core value proposition about discovering hidden founders
-3. **How It Works** - 4-step visual flow (Scout → House → Invest → Exit)
-4. **By the Numbers** - 6 key metrics in neon green callouts
-5. **Global Houses** - 7 international residency locations with verticals
-6. **Traction** - Current portfolio and partnership highlights
-7. **Team** - Founders and key team members
-8. **CTA & Footer** - Call-to-action and contact information
-
-### Technical Highlights
-
-- **No Framework Dependencies** - Pure HTML, CSS, and vanilla JavaScript
-- **Embedded Assets** - All CSS and JS embedded in single HTML file
-- **Responsive Design** - Mobile-first approach with breakpoints for all device sizes
-- **Smooth Animations** - Scroll-reveal animations and hover effects
-- **SVG Favicon** - DNA helix-inspired favicon as SVG data URI
-- **SEO Optimized** - Meta tags, Open Graph support, structured data
-- **Fast Loading** - 25KB single file, no external dependencies
-- **Accessibility** - Semantic HTML, proper heading hierarchy, color contrast
-
-### Animations & Interactions
-
-- Smooth scroll behavior across the page
-- Fade-in animations on scroll reveal
-- Neon glow effects on hover for interactive elements
-- Staggered animations for grid elements
-- Smooth transitions on all buttons and links
-- Mobile-friendly animations (respects `prefers-reduced-motion`)
-
-## Deployment to Netlify
-
-### Quick Start
-
-1. **Connect Your Repository**
-   - Push this directory to GitHub
-   - Log in to netlify.com
-   - Click "Add new site" → "Import an existing project"
-   - Select your repository
-
-2. **Configure Build Settings**
-   - Build command: (leave empty - static site)
-   - Publish directory: `/` (root)
-   - Netlify will auto-detect the configuration
-
-3. **Domain Setup**
-   - Add your custom domain in Site settings
-   - Configure DNS or use Netlify DNS
-   - The `netlify.toml` file handles www → non-www redirect
-
-### Configuration Files
-
-**netlify.toml**
-- Sets up caching headers for performance
-- Configures security headers (X-Frame-Options, CSP, etc.)
-- Handles www subdomain redirect
-- Sets up catch-all routing for SPA
-
-**_redirects**
-- Netlify redirect rules
-- Converts www.biopunkvc.com → biopunkvc.com
-- Routes 404s to index.html for proper SPA handling
-
-## Customization Guide
-
-### Update Contact Email
-Replace `er.creates@gmail.com` with your email in:
-- All "Request Deck" buttons
-- Footer social links
-- mailto: links
-
-### Change Colors
-Edit these CSS variables in the `<style>` section:
-```css
---primary-bg: #0A0A0A;
---neon-green: #00FF88;
---punk-pink: #FF3366;
---text-primary: #FFFFFF;
---text-secondary: #B0B0B0;
+```js
+{
+  id:     "indiebio-sosv",              // slug (unique)
+  name:   "IndieBio (SOSV)",
+  type:   "Accelerator",                // see categories below
+  capital:"Mixed",                      // Non-dilutive | Equity | Convertible/SAFE | Mixed
+  stage:  "Pre-seed–Seed",              // Idea | Pre-seed | Pre-seed–Seed | Seed
+  amount: "$250K–$525K",                // check / grant size (free text)
+  geo:    "US (SF, NY)",                // geography
+  focus:  "All biotech / deep-tech bio",
+  url:    "https://indiebio.co",
+  hq:     "San Francisco / New York (SOSV)",
+  blurb:  "One sentence on what/whom they fund at the earliest stage."
+}
 ```
 
-### Update Team Member Info
-Modify the Team section HTML to add photos and bios
+**Categories (`type`):** Accelerator · Pre-seed/Seed VC · Venture Studio ·
+Government Grant · Philanthropic Grant · Fellowship · Angel/Syndicate ·
+Prize/Competition · Crowdfunding.
 
-### Add New Sections
-Copy the structure of existing sections and follow the CSS naming conventions:
-- Use `scroll-reveal` class for fade-in animations
-- Use `.container` for max-width wrapper
-- Follow the color scheme for consistency
+The site reads this file directly; the counts, filters, and category chips all derive
+from the data — add an entry and everything updates automatically.
 
-## Performance
+## Contribute a funding source
 
-- **Page Load**: <1s on 4G connection
-- **Fully Interactive**: <2s on 3G connection
-- **First Paint**: <500ms
-- **Lighthouse Score**: 95+ on all metrics
-- **File Size**: 25KB total (HTML + CSS + JS combined)
+Two ways, both welcome:
 
-## Browser Support
+1. **On the site** — use the *"Add a funding source"* form on
+   [biopunkvc.com](https://biopunkvc.com). Submissions go to Netlify Forms; we review
+   them before adding to the map.
+2. **Open a PR** — add or correct an object in `assets/data.js`, keeping it valid JS.
+   Keep `blurb` to one honest sentence and prefer real, verifiable amounts (approximate
+   ranges are fine; use `"Varies"` when unknown).
 
-- Chrome/Edge: Latest 2 versions
-- Firefox: Latest 2 versions
-- Safari: Latest 2 versions
-- Mobile browsers: iOS Safari 12+, Chrome for Android
+## Run locally
 
-## SEO Features
+No dependencies:
 
-- Semantic HTML5 structure
-- Meta descriptions and Open Graph tags
-- Mobile viewport configuration
-- Structured data ready for schema.org
-- Fast page load for Core Web Vitals
-- Clean URL structure
+```bash
+python3 -m http.server 8099    # then open http://127.0.0.1:8099
+```
 
-## Security
+## Deploy
 
-The website includes security headers:
-- Content Security Policy (CSP) ready
-- X-Frame-Options: DENY (prevents clickjacking)
-- X-XSS-Protection enabled
-- Referrer-Policy: strict-origin-when-cross-origin
-- Permissions-Policy: Restricts unnecessary APIs
+Static site on Netlify — push to `main` and Netlify serves the repo root verbatim.
+The dataset (`assets/data.js`) is served with `max-age=0, must-revalidate` so the map
+is always current. See `DEPLOYMENT.md` for domain and form setup.
 
-## Future Enhancements
-
-Optional additions for future versions:
-- Blog section for thought leadership
-- Portfolio/portfolio company showcase
-- Application form for founder sign-ups
-- Newsletter subscription integration
-- Analytics integration (Plausible, Fathom)
-- CMS integration (Airtable, Webflow CMS)
-
-## License
-
-&copy; 2026 Biopunk VC. All rights reserved.
-
-## Support
-
-For deployment issues or customization help, refer to:
-- [Netlify Documentation](https://docs.netlify.com/)
-- [HTML/CSS/JS Standards](https://developer.mozilla.org/)
-- Contact: er.creates@gmail.com
+---
+&copy; 2026 Biopunk · Building the map of the earliest capital for biotech.
