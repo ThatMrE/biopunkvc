@@ -1,13 +1,13 @@
 # Deployment — biopunkvc.com
 
-The site is a **static site** (no build step). Netlify publishes the repository root
-(`publish = "."` in `netlify.toml`) verbatim.
+A static site, with no build step. Netlify publishes the repository root verbatim
+(`publish = "."` in `netlify.toml`).
 
 ## Continuous deploy (git → Netlify)
 
-1. The Netlify site for **biopunkvc.com** is connected to this GitHub repo.
-2. Every push to `main` auto-deploys within ~30 seconds.
-3. No build command, no framework — Netlify just serves the files.
+1. The Netlify site for **biopunkvc.com** connects to this GitHub repo.
+2. Every push to `main` deploys within about 30 seconds.
+3. No build command and no framework. Netlify serves the files.
 
 ## Custom domain
 
@@ -15,26 +15,26 @@ The site is a **static site** (no build step). Netlify publishes the repository 
 - `www.biopunkvc.com` → `biopunkvc.com` via the 301 in `netlify.toml` / `_redirects`
 - Netlify provisions the TLS certificate automatically.
 
-If DNS is not yet pointed at Netlify: in the Netlify dashboard → **Domain management**,
-add `biopunkvc.com`, then either use Netlify DNS or point your registrar's records at
-Netlify (the dashboard shows the exact `A` / `CNAME` values). Propagation can take up
-to 24h.
+If DNS does not point at Netlify yet, open the Netlify dashboard → **Domain management**
+and add `biopunkvc.com`. Then either use Netlify DNS or point your registrar's records at
+Netlify. The dashboard shows the exact `A` and `CNAME` values. Propagation can take up
+to 24 hours.
 
 ## Community submissions (Netlify Forms)
 
-The *"Add a funding source"* form uses **Netlify Forms** — no backend required.
+The *"Add a funding source"* form uses **Netlify Forms**. It needs no backend.
 
-- The form is named `capital-map-submission` and is detected by Netlify at deploy time
-  (a hidden static copy of the form exists in `index.html` for detection; the visible
-  form is progressively enhanced by `assets/app.js` to submit via `fetch`).
+- The form carries the name `capital-map-submission`, which Netlify detects at deploy
+  time. A hidden static copy in `index.html` makes that detection work. `assets/app.js`
+  then enhances the visible form to submit through `fetch`.
 - Submissions appear in the Netlify dashboard under **Forms**.
 - To get notified: Netlify dashboard → **Forms → Settings & notifications** → add an
   email (or Slack) notification. Point it at the maintainer's inbox.
 - A honeypot field (`bot-field`) filters basic spam. Enable Netlify's built-in spam
   filtering / reCAPTCHA in the dashboard if needed.
 
-Reviewed submissions get added to `assets/data.js` (directly or via PR) — that commit
-is the only thing that publishes them to the live map.
+A maintainer adds reviewed submissions to `assets/data.js`, directly or through a PR.
+That commit is the only thing that publishes them to the live map.
 
 ## Caching
 
@@ -43,8 +43,8 @@ Set in `netlify.toml`:
 - `assets/data.js` → `max-age=0, must-revalidate` (the map must always be current)
 - `*.html` → `max-age=0, must-revalidate`
 - other `/assets/*` → short cache with revalidation
-- Security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`,
-  `Permissions-Policy`) applied site-wide.
+- Security headers apply site-wide: `X-Frame-Options`, `X-Content-Type-Options`,
+  `Referrer-Policy` and `Permissions-Policy`.
 
 ## Post-deploy checklist
 
